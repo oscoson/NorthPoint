@@ -599,7 +599,7 @@ MonoBehaviour:
   masterIntensity: 0
   areaLights:
   - {fileID: 740934093}
-  master: {fileID: 0}
+  master: {fileID: 86415890}
 --- !u!1 &105387299
 GameObject:
   m_ObjectHideFlags: 0
