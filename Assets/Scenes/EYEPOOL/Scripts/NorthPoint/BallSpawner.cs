@@ -22,12 +22,14 @@ public class BallSpawner : MonoBehaviour
     private static BallPalette.Entry[] ballPalette;
 
     [Header("Spawn Area Settings")]
-    [SerializeField] private Vector2 xRange;  // = new Vector2(-13.9f, 13.9f);
-    [SerializeField] private Vector2 zRange;  // = new Vector2(-13.9f, 13.9f);
+    [SerializeField] private Vector2 xRange = new Vector2(-13.9f, 13.9f);
 
-    [Header("Non-related Asset References")]
-    [SerializeField] private GameObject spawnEffect;
-    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private float xSpawnRange;
+    [SerializeField] private float zSpawnRange;
+    // [SerializeField] private Vector2 yRange = new Vector2(-13.9f, 13.9f);
+
+    private GameObject spawnEffect;
+    private AudioManager audioManager;
 
     private float sinkBoundary;
 
@@ -54,18 +56,27 @@ public class BallSpawner : MonoBehaviour
         if (ballCount <= 0 && !zeroFlag)
         {
             zeroFlag = true;
-            // Start Coroutine for Spawning Energy Ball
+            StartCoroutine(NewPlayerBallSpawn());
         }
         if (ballCount > 0)
         {
             zeroFlag = false;
         }
     }
-    // TODO: Implement Spawn Function (think over whether we want prefabs instead of what Kevin wrote)
-    // private EnergyBall SpawnEnergyBall()
-    // {
-        
-    // }
+
+    private void SpawnEnergyBall()
+    {
+        int ballSeed = Random.Range(0, ballPalette.Length);
+        Vector3 pos = new(Random.Range(-xSpawnRange, xSpawnRange), -0.25f , Random.Range(-zSpawnRange, zSpawnRange));
+
+        GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
+        newEnergyBall.AddComponent<EnergyBall>();
+        newEnergyBall.GetComponent<EnergyBall>().Initialise(newEnergyBall, ballSeed, ballPalette[ballSeed].material.color, ballPalette[ballSeed].captureSprite, ballPalette[ballSeed].spawnFX, this);
+
+
+        // Audio Manager Play
+        // Instaitate Spawn Effect
+    }
     
     private void DestroyBall(EnergyBall energyBall)
     {
@@ -73,7 +84,7 @@ public class BallSpawner : MonoBehaviour
         Destroy(energyBall.gameObject);
     }
 
-    public void OnAugmentaObjectEnter(AugmentaObject obj, Augmenta.AugmentaDataType dataType)
+    public void OnAugmentaObjectEnter(AugmentaObject obj, AugmentaDataType dataType)
     {
         int id = obj.id; // Assume unique per person
         // Debug.Log($"Object {id} is entering");
@@ -85,16 +96,16 @@ public class BallSpawner : MonoBehaviour
         }
     }
 
-    public void OnAugmentaObjectLeave(AugmentaObject obj, Augmenta.AugmentaDataType dataType)
+    public void OnAugmentaObjectLeave(AugmentaObject obj, AugmentaDataType dataType)
     {
         int id = obj.id;
         // Debug.Log($"Object {id} is leaving");
-        if (obj.GetComponentInChildren<Ghost>() != null)
+        if (obj.GetComponentInChildren<EnergyBall>() != null)
         {
-            // Destroy Ghost on Leave
+            DestroyBall(obj.GetComponent<EnergyBall>());
         }
-        // can put else statement here if we want ghosts to despawn when player leaves
-        // Cancel ghost spawn if they left early
+        // can put else statement here if we want Ballss to despawn when player leaves
+        // Cancel Ball spawn if they left early
         // if (presenceTimers.TryGetValue(id, out Coroutine c))
         // {
         //     StopCoroutine(c);
@@ -113,20 +124,34 @@ public class BallSpawner : MonoBehaviour
         {
             // Debug.Log($"Object {id} confirmed present after {minimumPresence} seconds");
             presenceTimers.Remove(id);
-            // StartCoroutine(NewPlayerGhostSpawn());
+            StartCoroutine(NewPlayerBallSpawn());
         }
     }
 
-    public IEnumerator DelayedBallSpawn()
+    public IEnumerator DelayedBallSpawn(float manDelay)
     {
-        //TODO Implement Delayed Ball Spawn
-        yield return 0f;
+        yield return new WaitForSeconds(minimumPresence);
+        if (!(ballCount >= maxBallsInRoom))
+        {
+            ballCount++;
+            yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 5f)); // time between ball spawns
+            SpawnEnergyBall();
+        }
     }
 
     public IEnumerator NewPlayerBallSpawn()
     {
-        // TODO Implement New Set of Energy Balls to Spawn
-        yield return 0f;
+        for(int i = 0; i < ballsPerPerson; i++)
+        {
+            if (ballCount < maxBallsInRoom)
+            {
+                StartCoroutine(DelayedBallSpawn(0f));
+            }
+            else
+            {
+                yield return null;
+            }
+        }
     }
     
     public float GetSinkBoundary()
@@ -134,7 +159,7 @@ public class BallSpawner : MonoBehaviour
         return sinkBoundary;
     }
     
-    public int GetGhosts()
+    public int GetBalls()
     {
         return ballCount;
     }

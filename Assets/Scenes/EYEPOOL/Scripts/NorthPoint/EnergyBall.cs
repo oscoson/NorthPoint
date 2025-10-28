@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnergyBall : MonoBehaviour
 {
     // Read-only towards other scripts
-    public GameObject sprite { get; private set; }
+    public GameObject ballObject { get; private set; }
     public int targetSinkID { get; private set; }
     public Color ballColor { get; private set; }
     public Sprite captureSprite { get; private set; }
@@ -22,34 +22,27 @@ public class EnergyBall : MonoBehaviour
     private float speed;
     private float size;
 
-    private bool _initialised = false;
     private AugmentaPickup personAttached;
-    [SerializeField] private GhostSpawner spawner;
+    [SerializeField] private BallSpawner spawner;
     private AudioManager audioManager;
     private Animator animator;
 
-    public void Initialise(GameObject _sprite, int _targetSinkID, Color _ballColor, Sprite _captureSprite, GameObject _captureEffect, GhostSpawner ghostSpawner)
+    public void Initialise(GameObject _ballObject, int _targetSinkID, Color _ballColor, Sprite _captureSprite, GameObject _captureEffect, BallSpawner ballSpawner)
     {
-        if (_initialised)
-        {
-            // Consider removing this (Kevin's code but better safe than sorry?)
-            return;
-        }
-        sprite = _sprite;
+        ballObject = _ballObject;
         targetSinkID = _targetSinkID;
         ballColor = _ballColor;
         captureSprite = _captureSprite;
         captureEffect = _captureEffect;
-        spawner = ghostSpawner;
+        spawner = ballSpawner;
 
         audioManager = FindAnyObjectByType<AudioManager>();
-        animator = sprite.GetComponent<Animator>();
+        animator = ballObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!_initialised) return; // again, consider removing
         switch (state)
         {
             case BallState.Hovering:
