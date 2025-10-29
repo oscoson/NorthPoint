@@ -19,10 +19,14 @@ public class EnergyBall : MonoBehaviour
 
     public BallState state = BallState.Hovering;
     public float dropoffDelay { get; private set; } = 1.0f;
-    private float speed;
+    private float dropoffTimer = 0f;
+    private float hoverCountDown = 1.0f;
+
     private float size;
 
     private AugmentaPickup personAttached;
+    [SerializeField] private float speed = 2f;
+    [SerializeField] private Vector3 newPos;
     [SerializeField] private BallSpawner spawner;
     private AudioManager audioManager;
     private Animator animator;
@@ -46,10 +50,53 @@ public class EnergyBall : MonoBehaviour
         switch (state)
         {
             case BallState.Hovering:
+                hoverCountDown -= Time.deltaTime;
+                if (hoverCountDown <= 0f)
+                {
+                    state = BallState.Planning;
+                }
                 break;
             case BallState.Planning:
+                newPos = new Vector3(spawner.GetRandomXPos(), -0.25f, spawner.GetRandomZPos());
+                state = BallState.Moving;
                 break;
             case BallState.Moving:
+                // Fixed Update
+                break;
+            case BallState.Attached:
+                int sinkHere = Util.GetSinkID(transform.position, spawner.GetSinkBoundary());
+                if (sinkHere != targetSinkID) dropoffTimer = 0f;
+
+                dropoffTimer += Time.deltaTime;
+                if (dropoffTimer >= dropoffDelay)
+                {
+                    Detach(true);
+                }
+                break;
+        }
+    }
+
+    void FixedUpdate()
+    {
+            switch (state)
+        {
+            case BallState.Hovering:
+
+                break;
+            case BallState.Planning:
+                
+                break;
+            case BallState.Moving:
+                if (newPos != transform.position)
+                {
+                    Vector3 pos = Vector3.MoveTowards(transform.position, newPos, speed * Time.fixedDeltaTime);
+                    gameObject.GetComponent<Rigidbody>().MovePosition(pos);
+                }
+                else
+                {
+                    hoverCountDown = 1;
+                    state = BallState.Hovering;
+                }
                 break;
             case BallState.Attached:
                 break;
@@ -58,14 +105,36 @@ public class EnergyBall : MonoBehaviour
 
     public void AttachTo(Transform parent)
     {
-        // Attach to Player
+        if (state == BallState.Attached) return;
+
+        state = BallState.Attached;
+        transform.SetParent(parent, true);
+        // transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false; // hide ball sprite
+        personAttached = parent.GetComponent<AugmentaPickup>();
+        personAttached.AttachBallRing(this);
+        // Instantiate(splat, transform.position + new Vector3(-0.0125f, 0f, 0f), Quaternion.Euler(90, -90, 0)); // run the splat with offset
+        // PlayPickupSound();
+        // if (personAttached == null)
+        // {
+        //     // Debug.Log("unable to pick up person properly");
+        // }
     }
 
     public void Detach(bool reachedCorrectSink)
     {
-        // Detach and destroy
+        if (state != BallState.Attached) return;
+
+        if (reachedCorrectSink)
+        {
+            state = BallState.Hovering;
+            transform.SetParent(null, true);
+            personAttached.DropBall();
+            // PlayDropOffSound(targetSinkID);
+            float delay = Random.Range(1f, 8f);
+            spawner.DestroyBall(this);
+        }
     }
-    
+
     private void PlayPickupSound()
     {
         int randInt = Random.Range(1, 4);

@@ -132,7 +132,7 @@ public class Ghost : MonoBehaviour
         transform.SetParent(parent, true);
         transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false; // hide ghost sprite
         personAttached = parent.GetComponent<AugmentaPickup>();
-        personAttached.AttachGhostRing(this);
+        // personAttached.AttachGhostRing(this);
         Instantiate(splat, transform.position + new Vector3(-0.0125f, 0f, 0f), Quaternion.Euler(90, -90, 0)); // run the splat with offset
         maze.makeMazeNodeAvailable(node);
         PlayPickupSound();
@@ -151,7 +151,7 @@ public class Ghost : MonoBehaviour
         {
             state = GhostState.Hovering; // TODO: maybe create a new dead state? 
             transform.SetParent(null, true); // detach movement of ghost from parent
-            personAttached.DropGhost();
+            // personAttached.DropGhost();
             PlayDropOffSound(targetSinkID);
 
             float delay = Random.Range(1f, 8f);

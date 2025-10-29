@@ -40,10 +40,10 @@ public class BallSpawner : MonoBehaviour
         sinkBoundary = Mathf.Abs(xRange.x) - 3.5f;
         audioManager = FindAnyObjectByType<AudioManager>();
     }
-    
+
     void Start()
     {
-        if(augmentaManager != null)
+        if (augmentaManager != null)
         {
             augmentaManager.augmentaObjectEnter += OnAugmentaObjectEnter;
             augmentaManager.augmentaObjectLeave += OnAugmentaObjectLeave;
@@ -67,7 +67,7 @@ public class BallSpawner : MonoBehaviour
     private void SpawnEnergyBall()
     {
         int ballSeed = Random.Range(0, ballPalette.Length);
-        Vector3 pos = new(Random.Range(-xSpawnRange, xSpawnRange), -0.25f , Random.Range(-zSpawnRange, zSpawnRange));
+        Vector3 pos = new(GetRandomXPos(), -0.25f,GetRandomZPos());
 
         GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
         newEnergyBall.AddComponent<EnergyBall>();
@@ -75,10 +75,10 @@ public class BallSpawner : MonoBehaviour
 
 
         // Audio Manager Play
-        // Instaitate Spawn Effect
+        // Instantiate Spawn Effect
     }
-    
-    private void DestroyBall(EnergyBall energyBall)
+
+    public void DestroyBall(EnergyBall energyBall)
     {
         ballCount--;
         Destroy(energyBall.gameObject);
@@ -87,8 +87,8 @@ public class BallSpawner : MonoBehaviour
     public void OnAugmentaObjectEnter(AugmentaObject obj, AugmentaDataType dataType)
     {
         int id = obj.id; // Assume unique per person
-        // Debug.Log($"Object {id} is entering");
-        
+                         // Debug.Log($"Object {id} is entering");
+
         if (!presenceTimers.ContainsKey(id))
         {
             Coroutine c = StartCoroutine(ConfirmPresenceAfterDelay(obj, id));
@@ -102,7 +102,8 @@ public class BallSpawner : MonoBehaviour
         // Debug.Log($"Object {id} is leaving");
         if (obj.GetComponentInChildren<EnergyBall>() != null)
         {
-            DestroyBall(obj.GetComponent<EnergyBall>());
+            Debug.Log("DELETING");
+            DestroyBall(obj.GetComponentInChildren<EnergyBall>());
         }
         // can put else statement here if we want Ballss to despawn when player leaves
         // Cancel Ball spawn if they left early
@@ -141,7 +142,7 @@ public class BallSpawner : MonoBehaviour
 
     public IEnumerator NewPlayerBallSpawn()
     {
-        for(int i = 0; i < ballsPerPerson; i++)
+        for (int i = 0; i < ballsPerPerson; i++)
         {
             if (ballCount < maxBallsInRoom)
             {
@@ -153,15 +154,25 @@ public class BallSpawner : MonoBehaviour
             }
         }
     }
-    
+
     public float GetSinkBoundary()
     {
         return sinkBoundary;
     }
-    
+
     public int GetBalls()
     {
         return ballCount;
+    }
+
+    public float GetRandomXPos()
+    {
+        return Random.Range(-xSpawnRange, xSpawnRange);
+    }
+
+    public float GetRandomZPos()
+    {
+        return Random.Range(-zSpawnRange, zSpawnRange);
     }
 
     // Destructor
