@@ -87,7 +87,6 @@ public class BallSpawner : MonoBehaviour
     public void OnAugmentaObjectEnter(AugmentaObject obj, AugmentaDataType dataType)
     {
         int id = obj.id; // Assume unique per person
-                         // Debug.Log($"Object {id} is entering");
 
         if (!presenceTimers.ContainsKey(id))
         {
@@ -99,13 +98,12 @@ public class BallSpawner : MonoBehaviour
     public void OnAugmentaObjectLeave(AugmentaObject obj, AugmentaDataType dataType)
     {
         int id = obj.id;
-        // Debug.Log($"Object {id} is leaving");
         if (obj.GetComponentInChildren<EnergyBall>() != null)
         {
             Debug.Log("DELETING");
             DestroyBall(obj.GetComponentInChildren<EnergyBall>());
         }
-        // can put else statement here if we want Ballss to despawn when player leaves
+        // can put else statement here if we want Balls to despawn when player leaves
         // Cancel Ball spawn if they left early
         // if (presenceTimers.TryGetValue(id, out Coroutine c))
         // {
@@ -123,7 +121,6 @@ public class BallSpawner : MonoBehaviour
         // If we're still tracking the object after 2.5 seconds, they didn't leave
         if (presenceTimers.ContainsKey(id))
         {
-            // Debug.Log($"Object {id} confirmed present after {minimumPresence} seconds");
             presenceTimers.Remove(id);
             StartCoroutine(NewPlayerBallSpawn());
         }
@@ -135,7 +132,7 @@ public class BallSpawner : MonoBehaviour
         if (!(ballCount >= maxBallsInRoom))
         {
             ballCount++;
-            yield return new WaitForSeconds(UnityEngine.Random.Range(1f, 5f)); // time between ball spawns
+            yield return new WaitForSeconds(Random.Range(1f, 5f)); // time between ball spawns
             SpawnEnergyBall();
         }
     }

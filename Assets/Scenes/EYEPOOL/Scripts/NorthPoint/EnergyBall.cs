@@ -61,7 +61,7 @@ public class EnergyBall : MonoBehaviour
                 state = BallState.Moving;
                 break;
             case BallState.Moving:
-                // Fixed Update
+                // Handled In FixedUpdate
                 break;
             case BallState.Attached:
                 int sinkHere = Util.GetSinkID(transform.position, spawner.GetSinkBoundary());
@@ -78,13 +78,11 @@ public class EnergyBall : MonoBehaviour
 
     void FixedUpdate()
     {
-            switch (state)
+        switch (state)
         {
             case BallState.Hovering:
-
                 break;
             case BallState.Planning:
-                
                 break;
             case BallState.Moving:
                 if (newPos != transform.position)

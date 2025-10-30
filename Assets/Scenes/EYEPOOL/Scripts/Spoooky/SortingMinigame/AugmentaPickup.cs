@@ -80,11 +80,6 @@ public class AugmentaPickup : MonoBehaviour
         }
     }
 
-    // void Start()
-    // {
-    //     Debug.Log($"[Start] Augmenta object id: {myAugmentaObject.id}, oid: {myAugmentaObject.oid}");
-    // }
-
     // Create aura ring
     void BuildRing()
     {
