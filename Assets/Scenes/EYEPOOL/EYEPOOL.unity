@@ -258,8 +258,8 @@ MonoBehaviour:
   ballCount: 0
   zeroFlag: 0
   xRange: {x: -13.9, y: 13.9}
-  xSpawnRange: 13
-  zSpawnRange: 13
+  xSpawnRange: 14
+  zSpawnRange: 14
 --- !u!1 &74107890
 GameObject:
   m_ObjectHideFlags: 0
