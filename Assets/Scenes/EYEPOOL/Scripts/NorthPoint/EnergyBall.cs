@@ -20,12 +20,12 @@ public class EnergyBall : MonoBehaviour
     public BallState state = BallState.Hovering;
     public float dropoffDelay { get; private set; } = 1.0f;
     private float dropoffTimer = 0f;
-    private float hoverCountDown = 1.0f;
+    private float hoverCountDown = 0.1f;
 
     private float size;
 
     private AugmentaPickup personAttached;
-    [SerializeField] private float speed = 2f;
+    [SerializeField] private float speed;
     [SerializeField] private Vector3 newPos;
     [SerializeField] private BallSpawner spawner;
     private AudioManager audioManager;
@@ -42,6 +42,8 @@ public class EnergyBall : MonoBehaviour
 
         audioManager = FindAnyObjectByType<AudioManager>();
         animator = ballObject.GetComponent<Animator>();
+
+        speed = Random.Range(2, 5);
     }
 
     // Update is called once per frame
@@ -92,7 +94,7 @@ public class EnergyBall : MonoBehaviour
                 }
                 else
                 {
-                    hoverCountDown = 1;
+                    hoverCountDown = 0.1f;
                     state = BallState.Hovering;
                 }
                 break;
