@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: bba2d9c4042079640af149b710d901ad
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
+  - snowRT: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

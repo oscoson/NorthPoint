@@ -59,6 +59,9 @@ public class AugmentaPickup : MonoBehaviour
         rb.isKinematic = true;                  // no forces, just follows pivot
         rb.useGravity = false;
 
+        gameObject.AddComponent<SnowPathDrawer>();
+        gameObject.GetComponent<SnowPathDrawer>().snowComputeShader = Resources.Load<ComputeShader>("SnowComputeShader");
+
         captureRingSprite = new GameObject("CaptureRingSprite");
         captureRingSprite.transform.SetParent(transform, false);
         captureRingSprite.transform.rotation = Quaternion.Euler(90, -90, 0);
