@@ -1,6 +1,5 @@
 using UnityEngine;
 using Augmenta;
-using Unity.VisualScripting;
 
 /// Adds interactivity to an Augmenta object:
 /// Pulsing influence ring and changes into respective Ghosts Sprite when captured
@@ -28,15 +27,14 @@ public class AugmentaPickup : MonoBehaviour
     private GameObject captureRingSprite;
     private CapsuleCollider myCollider;
 
-    private Ghost carriedGhost;
-    private float angle;
+    private EnergyBall carriedBall;
     private LineRenderer ring;
     private Material ringMat;
     private Color currentClr = Color.white;
     private Color targetClr = Color.white;
     private float baseWidth;
 
-    private Ghost overlappingGhost;
+    private EnergyBall overlappingBall;
     private float pickupTimer;
     private bool isOverlapping = false;
 
@@ -61,6 +59,9 @@ public class AugmentaPickup : MonoBehaviour
         rb.isKinematic = true;                  // no forces, just follows pivot
         rb.useGravity = false;
 
+        gameObject.AddComponent<SnowPathDrawer>();
+        gameObject.GetComponent<SnowPathDrawer>().snowComputeShader = Resources.Load<ComputeShader>("SnowComputeShader");
+
         captureRingSprite = new GameObject("CaptureRingSprite");
         captureRingSprite.transform.SetParent(transform, false);
         captureRingSprite.transform.rotation = Quaternion.Euler(90, -90, 0);
@@ -81,11 +82,6 @@ public class AugmentaPickup : MonoBehaviour
             UpdateRingRadius(ringRadius);
         }
     }
-
-    // void Start()
-    // {
-    //     Debug.Log($"[Start] Augmenta object id: {myAugmentaObject.id}, oid: {myAugmentaObject.oid}");
-    // }
 
     // Create aura ring
     void BuildRing()
@@ -135,35 +131,33 @@ public class AugmentaPickup : MonoBehaviour
         ring.SetPositions(pts);
     }
 
-    // Entered ghost collider
+    // Entered ball collider
     void OnTriggerEnter(Collider other)
     {
-        if (carriedGhost != null) return;
+        if (carriedBall != null) return;
 
-        if (other.TryGetComponent(out Ghost ghost) && ghost.state != Ghost.GhostState.Attached)
+        if (other.TryGetComponent(out EnergyBall ball) && ball.state != EnergyBall.BallState.Attached)
         {
-            overlappingGhost = ghost;
+            overlappingBall = ball;
             pickupTimer = 0f;
             isOverlapping = true;
         }
     }
 
-    // Exited ghost collider
+    // Exited Ball collider
     void OnTriggerExit(Collider other)
     {
-        if (overlappingGhost != null && other.gameObject == overlappingGhost.gameObject)
+        if (overlappingBall != null && other.gameObject == overlappingBall.gameObject)
         {
-            overlappingGhost = null;
+            overlappingBall = null;
             isOverlapping = false;
         }
     }
 
     void Update()
     {
-        // Debug.Log($"[{myAugmentaObject.id}] WorldPos: {myAugmentaObject.worldPosition2D}, UnityPos: {transform.position}, WorldVelocity3D: {myAugmentaObject.worldVelocity3D}");
-
         // Orbit motion
-        if (carriedGhost != null) // "I am already holding a ghost"
+        if (carriedBall != null) // "I am already holding a ball"
         {
             float speed = myAugmentaObject.worldVelocity3D.magnitude;
             // Update only if speed changed significantly
@@ -172,24 +166,17 @@ public class AugmentaPickup : MonoBehaviour
                 UpdateRingRadius(1f + speed * speedToRingRadiusFactor);
                 lastSpeed = speed;
             }
-
-            // // orb spinning logic
-            // angle += (velocity + (speed * speedToRingRadiusFactor)) * Time.deltaTime;
-            // Vector3 offs = new Vector3(Mathf.Cos(angle), 0, Mathf.Sin(angle)) * ringRadius; 
-            // carriedGhost.transform.localPosition = offs;
         }
-        else if (isOverlapping && overlappingGhost != null) // "I am colliding with a ghost"
+        else if (isOverlapping && overlappingBall != null) // "I am colliding with a ball"
         {
             pickupTimer += Time.deltaTime;
             if (pickupTimer >= pickupDelay)
             {
-                // Debug.Log("Ghost state should be attached");
-                carriedGhost = overlappingGhost;
-                angle = Random.value * 2 * Mathf.PI;
-                targetClr = carriedGhost.ghostColor;
-                carriedGhost.AttachTo(transform);
+                carriedBall = overlappingBall;
+                targetClr = carriedBall.ballColor;
+                carriedBall.AttachTo(transform);
 
-                overlappingGhost = null;
+                overlappingBall = null;
                 isOverlapping = false;
             }
         }
@@ -208,29 +195,26 @@ public class AugmentaPickup : MonoBehaviour
         ringMat.color = currentClr;
     }
 
-    // called externally by another class to help drop the ghost possession
-    public void DropGhost()
+    // called externally by another class to help drop the ball possession
+    public void DropBall()
     {
-        DetachGhostRing();
+        DetachBallRing();
         UpdateRingRadius(1.0f); // return ring to original size
-        if (carriedGhost == null) return;
+        if (carriedBall == null) return;
 
-        carriedGhost = null;           // Update() will fade back to white
+        carriedBall = null;           // Update() will fade back to white
     }
 
-    public void AttachGhostRing(Ghost ghost)
+    public void AttachBallRing(EnergyBall ball)
     {
-        // ghost colour spawns with 0 alpha, and cannot modify component without getting a variable to copy first
-        Color color = ghost.ghostColor;
+        // ball colour spawns with 0 alpha, and cannot modify component without getting a variable to copy first
+        Color color = ball.ballColor;
         color.a = 1f;
-        captureRingSprite.GetComponent<SpriteRenderer>().sprite = ghost.captureSprite;
+        // captureRingSprite.GetComponent<SpriteRenderer>().sprite = ball.captureSprite; // to be added
         captureRingSprite.GetComponent<SpriteRenderer>().color = color;
-
-        // ring.GetComponent<LineRenderer>().enabled = false; // hide ring when ghost is attached
     }
-    public void DetachGhostRing()
+    public void DetachBallRing()
     {
         captureRingSprite.GetComponent<SpriteRenderer>().sprite = null;
-        // ring.GetComponent<LineRenderer>().enabled = true; // show ring when ghost is detached
     }
 }
