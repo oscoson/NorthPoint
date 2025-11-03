@@ -101,7 +101,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 12.125731, g: 0, b: 0.3426991, a: 0.019607844}
+    - _Color: {r: 11.681333, g: 0, b: 0.3426991, a: 0.019607844}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Offset: {r: 0.5, g: 0.5, b: 0, a: 0}
