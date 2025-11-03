@@ -29,6 +29,7 @@ Material:
   m_ModifiedSerializedProperties: 4
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
+  - _EMISSIVE_COLOR_MAP
   - _ENABLE_FOG_ON_TRANSPARENT
   - _NORMALMAP_TANGENT_SPACE
   - _SURFACE_TYPE_TRANSPARENT
@@ -50,15 +51,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColorMap:
-        m_Texture: {fileID: 8400000, guid: 8168ec6be7dfd4e6ea04ad5a3670fdf6, type: 2}
+        m_Texture: {fileID: 8400000, guid: 3319706f8e674984da1dd68650d867c1, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissiveColorMap:
-        m_Texture: {fileID: 8400000, guid: 8168ec6be7dfd4e6ea04ad5a3670fdf6, type: 2}
+        m_Texture: {fileID: 8400000, guid: 3319706f8e674984da1dd68650d867c1, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8400000, guid: 3319706f8e674984da1dd68650d867c1, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
