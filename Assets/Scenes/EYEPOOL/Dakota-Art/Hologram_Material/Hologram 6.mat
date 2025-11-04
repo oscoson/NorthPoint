@@ -84,7 +84,7 @@ Material:
     - _ExcludeFromTUAndAA: 0
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
-    - _Power: -0.07
+    - _Power: -0.01
     - _RenderQueueType: 4
     - _SrcBlend: 1
     - _StencilRef: 0
@@ -108,7 +108,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 0
     m_Colors:
-    - _Color: {r: 5.122941, g: 1.141138, b: 0, a: 1}
+    - _Color: {r: 1.2104735, g: 12.641751, b: 12.844469, a: 0.96862745}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
