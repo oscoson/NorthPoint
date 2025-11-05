@@ -24226,6 +24226,7 @@ GameObject:
   - component: {fileID: 6468346936130077431}
   - component: {fileID: 4483960759052806962}
   - component: {fileID: 2401877541960531398}
+  - component: {fileID: 5950811338354844686}
   m_Layer: 7
   m_Name: EnergyBallRed
   m_TagString: Untagged
@@ -24340,3 +24341,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!210 &5950811338354844686
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161362574870923318}
+  m_Enabled: 1
+  m_SortingLayerID: -814287841
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0

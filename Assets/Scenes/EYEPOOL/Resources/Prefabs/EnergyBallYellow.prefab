@@ -4882,6 +4882,7 @@ GameObject:
   - component: {fileID: 7117497226450553078}
   - component: {fileID: 446247611383125762}
   - component: {fileID: 4933028414358981985}
+  - component: {fileID: 5479011447630585934}
   m_Layer: 0
   m_Name: EnergyBallYellow
   m_TagString: Untagged
@@ -4996,6 +4997,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!210 &5479011447630585934
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191330517372860536}
+  m_Enabled: 1
+  m_SortingLayerID: -814287841
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &6299643494093939382
 GameObject:
   m_ObjectHideFlags: 0

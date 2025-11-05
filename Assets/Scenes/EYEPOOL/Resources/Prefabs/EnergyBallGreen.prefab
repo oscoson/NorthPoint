@@ -4882,6 +4882,7 @@ GameObject:
   - component: {fileID: 6865883692648397073}
   - component: {fileID: 4970808224435243104}
   - component: {fileID: 2428913080803433025}
+  - component: {fileID: 2234987911733964602}
   m_Layer: 7
   m_Name: EnergyBallGreen
   m_TagString: Untagged
@@ -4996,6 +4997,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!210 &2234987911733964602
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2522501667485546402}
+  m_Enabled: 1
+  m_SortingLayerID: -814287841
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &3054081915502367621
 GameObject:
   m_ObjectHideFlags: 0

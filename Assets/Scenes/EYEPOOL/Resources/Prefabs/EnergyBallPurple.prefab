@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 1470146593589938035}
   - component: {fileID: 3123004029289019863}
   - component: {fileID: 5413160237494708943}
+  - component: {fileID: 4957650218029504946}
   m_Layer: 7
   m_Name: EnergyBallPurple
   m_TagString: Untagged
@@ -163,6 +164,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!210 &4957650218029504946
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258698820577650789}
+  m_Enabled: 1
+  m_SortingLayerID: -814287841
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1003355324576297153
 GameObject:
   m_ObjectHideFlags: 0
