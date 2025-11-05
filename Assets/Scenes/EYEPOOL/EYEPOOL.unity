@@ -1700,7 +1700,7 @@ GameObject:
   - component: {fileID: 124320891}
   - component: {fileID: 124320893}
   - component: {fileID: 124320892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8265,7 +8265,7 @@ GameObject:
   - component: {fileID: 314237913}
   - component: {fileID: 314237915}
   - component: {fileID: 314237914}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19540,7 +19540,7 @@ GameObject:
   - component: {fileID: 420168456}
   - component: {fileID: 420168458}
   - component: {fileID: 420168457}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsFan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24657,7 +24657,7 @@ GameObject:
   - component: {fileID: 466566514}
   - component: {fileID: 466566516}
   - component: {fileID: 466566515}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30549,7 +30549,7 @@ GameObject:
   - component: {fileID: 547820412}
   - component: {fileID: 547820411}
   - component: {fileID: 547820410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30659,7 +30659,7 @@ GameObject:
   - component: {fileID: 552976945}
   - component: {fileID: 552976947}
   - component: {fileID: 552976946}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35803,7 +35803,7 @@ GameObject:
   m_Component:
   - component: {fileID: 582296041}
   - component: {fileID: 582296040}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36112,7 +36112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640475560}
   - component: {fileID: 640475559}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36435,7 +36435,7 @@ GameObject:
   - component: {fileID: 643028836}
   - component: {fileID: 643028835}
   - component: {fileID: 643028834}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsFan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37359,7 +37359,7 @@ GameObject:
   - component: {fileID: 756267400}
   - component: {fileID: 756267402}
   - component: {fileID: 756267401}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37746,7 +37746,7 @@ GameObject:
   - component: {fileID: 809031309}
   - component: {fileID: 809031311}
   - component: {fileID: 809031310}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52054,7 +52054,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291321670}
   - component: {fileID: 1291321669}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsPurple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53466,12 +53466,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396862571}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.105032265, y: -0.07334336, z: -2.4411547}
-  m_LocalScale: {x: 0.027248641, y: 0.04512039, z: 1.0899056}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.5999999, y: -3.4499993, z: -0.30000067}
+  m_LocalScale: {x: 1.37, y: 1.3534276, z: 1.2501203}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1628133415}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1400686446
 PrefabInstance:
@@ -54034,7 +54034,7 @@ GameObject:
   - component: {fileID: 1437243172}
   - component: {fileID: 1437243174}
   - component: {fileID: 1437243173}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsFan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56376,93 +56376,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599600642}
   m_Mesh: {fileID: -3655589961870079969, guid: cfb2953235a554250b881265e335707d, type: 3}
---- !u!1 &1628133411
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1628133415}
-  - component: {fileID: 1628133414}
-  - component: {fileID: 1628133413}
-  m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1628133413
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628133411}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: bf1a0702e4c0f0048b0dcd678f1feaf2, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1628133414
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628133411}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1628133415
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628133411}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 4.6807847, y: -6.2500005, z: 1.9000006}
-  m_LocalScale: {x: 50.277737, y: 29.995914, z: 1.1469984}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1396862573}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1647676923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69479,7 +69392,7 @@ GameObject:
   - component: {fileID: 1945849912}
   - component: {fileID: 1945849911}
   - component: {fileID: 1945849910}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74609,7 +74522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986567360}
   - component: {fileID: 1986567359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77154,7 +77067,7 @@ GameObject:
   - component: {fileID: 2130308925}
   - component: {fileID: 2130308927}
   - component: {fileID: 2130308926}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ContainmentUnitsFan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77353,7 +77266,7 @@ SceneRoots:
   - {fileID: 1020391601}
   - {fileID: 204809292}
   - {fileID: 774094920}
-  - {fileID: 1628133415}
+  - {fileID: 1396862573}
   - {fileID: 2059406671}
   - {fileID: 2084261115}
   - {fileID: 1365036069}
