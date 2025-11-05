@@ -43377,6 +43377,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889197533}
+  - component: {fileID: 889197534}
   m_Layer: 7
   m_Name: Snow Interactivity
   m_TagString: Untagged
@@ -43400,6 +43401,18 @@ Transform:
   - {fileID: 533883782}
   m_Father: {fileID: 1321608169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &889197534
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889197532}
+  m_Enabled: 1
+  m_SortingLayerID: -626176631
+  m_SortingLayer: 1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &897999284
 GameObject:
   m_ObjectHideFlags: 0
