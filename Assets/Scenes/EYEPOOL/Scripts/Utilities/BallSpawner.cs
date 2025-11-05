@@ -67,7 +67,7 @@ public class BallSpawner : MonoBehaviour
     private void SpawnEnergyBall()
     {
         int ballSeed = Random.Range(0, ballPalette.Length);
-        Vector3 pos = new(GetRandomXPos(), 1f, GetRandomZPos());
+        Vector3 pos = new(GetRandomXPos(), -1f, GetRandomZPos());
 
         GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
         newEnergyBall.AddComponent<EnergyBall>();

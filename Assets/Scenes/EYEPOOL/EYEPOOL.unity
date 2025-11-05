@@ -1172,7 +1172,7 @@ MonoBehaviour:
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1153
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
   SMAAQuality: 2
@@ -6631,7 +6631,7 @@ GameObject:
   - component: {fileID: 157473819}
   - component: {fileID: 157473818}
   - component: {fileID: 157473817}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18744,6 +18744,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Light (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19256,7 +19260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393592394}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Long_Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36239,7 +36243,7 @@ MonoBehaviour:
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1153
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
   SMAAQuality: 2
@@ -36811,6 +36815,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
       propertyPath: m_Name
       value: Small_Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44339,6 +44347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light_Part (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -45867,7 +45879,7 @@ GameObject:
   - component: {fileID: 1141998863}
   - component: {fileID: 1141998862}
   - component: {fileID: 1141998861}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52366,7 +52378,7 @@ GameObject:
   - component: {fileID: 1304079471}
   - component: {fileID: 1304079470}
   - component: {fileID: 1304079469}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52956,6 +52968,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light_Part (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -53099,6 +53115,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
       propertyPath: m_Name
       value: Small_Light (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53446,13 +53466,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1396862571}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.6, y: -0.2, z: -0.3}
-  m_LocalScale: {x: 1.37, y: 1.3534274, z: 1.25012}
+  m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.105032265, y: -0.07334336, z: -2.4411547}
+  m_LocalScale: {x: 0.027248641, y: 0.04512039, z: 1.0899056}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1628133415}
-  m_Father: {fileID: 0}
+  m_Children: []
+  m_Father: {fileID: 1628133415}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1400686446
 PrefabInstance:
@@ -53529,6 +53548,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
       propertyPath: m_Name
       value: Light_Part (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53702,6 +53725,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
       propertyPath: m_Name
       value: Light_Part (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54132,7 +54159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.43
+      value: -5.76
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54520,7 +54547,7 @@ GameObject:
   - component: {fileID: 1493941137}
   - component: {fileID: 1493941136}
   - component: {fileID: 1493941135}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54669,7 +54696,7 @@ MonoBehaviour:
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1153
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
   SMAAQuality: 2
@@ -56360,7 +56387,6 @@ GameObject:
   - component: {fileID: 1628133415}
   - component: {fileID: 1628133414}
   - component: {fileID: 1628133413}
-  - component: {fileID: 1628133412}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -56368,27 +56394,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1628133412
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628133411}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1628133413
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -56450,12 +56455,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628133411}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.8545873, y: 1.6255032, z: 2.239785}
-  m_LocalScale: {x: 36.699078, y: 22.162924, z: 0.9175104}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 4.6807847, y: -6.2500005, z: 1.9000006}
+  m_LocalScale: {x: 50.277737, y: 29.995914, z: 1.1469984}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1396862573}
+  m_Children:
+  - {fileID: 1396862573}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &1647676923
 PrefabInstance:
@@ -56528,6 +56534,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
       propertyPath: m_Name
       value: Small_Light (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 672bbfeeafee2dd4abcaf27994f3bb48, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -74806,6 +74816,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light_Part (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74825,7 +74839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2018006278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Long_Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75174,6 +75188,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
       propertyPath: m_Name
       value: Light_Part (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76112,6 +76130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light_Part (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76636,7 +76658,7 @@ MonoBehaviour:
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
-    m_Bits: 129
+    m_Bits: 1153
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
   SMAAQuality: 2
@@ -77307,6 +77329,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Light_Part (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dcc21105f8a4a3a419c5d69c415083bd, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -77327,7 +77353,7 @@ SceneRoots:
   - {fileID: 1020391601}
   - {fileID: 204809292}
   - {fileID: 774094920}
-  - {fileID: 1396862573}
+  - {fileID: 1628133415}
   - {fileID: 2059406671}
   - {fileID: 2084261115}
   - {fileID: 1365036069}
