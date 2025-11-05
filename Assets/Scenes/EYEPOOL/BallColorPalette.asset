@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BallColorPalette
   m_EditorClassIdentifier: 
   entries:
-  - name: Energy Ball (Pink)
+  - name: Energy Ball (Purple)
     material: {fileID: 2100000, guid: b6a930cdeeed14d468c6f5736bf92b96, type: 2}
     captureSprite: {fileID: 0}
     prefab: {fileID: 258698820577650789, guid: 119e48402dac297459594148543eb383, type: 3}
@@ -28,7 +28,7 @@ MonoBehaviour:
     captureSprite: {fileID: 0}
     prefab: {fileID: 6191330517372860536, guid: 76be6799ce344ed47bbe646980ee09e6, type: 3}
     spawnFX: {fileID: 0}
-  - name: Energy Ball (Blue)
+  - name: Energy Ball (Red)
     material: {fileID: 2100000, guid: 949ee1f5beb144c6fbd4e24c8ea2bd79, type: 2}
     captureSprite: {fileID: 0}
     prefab: {fileID: 7161362574870923318, guid: 5eabfac5f1841cb499e16f3895fc232d, type: 3}

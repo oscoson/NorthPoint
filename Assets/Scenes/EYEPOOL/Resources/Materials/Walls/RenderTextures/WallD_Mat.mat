@@ -25,18 +25,21 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: WallD_Mat
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_Parent: {fileID: 2100000, guid: 018e08a8678664e94a15a5762b905365, type: 2}
-  m_ModifiedSerializedProperties: 16
+  m_Parent: {fileID: 2100000, guid: 899faf6fda4c73b468f2c238608f9886, type: 2}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
   - _EMISSIVE_COLOR_MAP
+  - _ENABLE_FOG_ON_TRANSPARENT
   - _NORMALMAP_TANGENT_SPACE
+  - _SURFACE_TYPE_TRANSPARENT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2225
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses:
   - TransparentDepthPrepass
   - TransparentDepthPostpass
@@ -62,14 +65,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _EmissiveIntensity: 1
-    - _StencilRefDepth: 8
-    - _StencilRefGBuffer: 10
-    - _StencilRefMV: 40
+    - _StencilRefDepth: 0
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
     - _StencilWriteMask: 6
     - _StencilWriteMaskDepth: 9
     - _StencilWriteMaskGBuffer: 15
     - _StencilWriteMaskMV: 41
-    - _ZTestDepthEqualForOpaque: 3
+    - _ZTestDepthEqualForOpaque: 4
     m_Colors:
     - _EmissiveColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
