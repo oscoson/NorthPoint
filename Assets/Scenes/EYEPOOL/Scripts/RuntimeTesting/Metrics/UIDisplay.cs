@@ -11,7 +11,7 @@ public class UIDisplay : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private KeypressManager keypressManager;
-    [SerializeField] private GhostSpawner ghostSpawner;
+    [SerializeField] private BallSpawner ballSpawner;
     [SerializeField] private FPSCounter fpsCounter;
     [SerializeField] private TextMeshProUGUI logText;
     [SerializeField] private GameObject Debugger;
@@ -41,10 +41,10 @@ public class UIDisplay : MonoBehaviour
 
         string text = "";
 
-        if (ghostSpawner != null)
+        if (ballSpawner != null)
         {
             // int numGhosts = ghostSpawner.ghostsToSpawn;
-            int numGhosts = ghostSpawner.GetGhosts();
+            int numGhosts = ballSpawner.GetBalls();
             text += $"# Ghosts: {numGhosts}\n";
         }
 
