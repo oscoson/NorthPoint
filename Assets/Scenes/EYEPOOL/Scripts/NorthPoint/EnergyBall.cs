@@ -59,7 +59,7 @@ public class EnergyBall : MonoBehaviour
                 }
                 break;
             case BallState.Planning:
-                newPos = new Vector3(spawner.GetRandomXPos(), -3f, spawner.GetRandomZPos());
+                newPos = new Vector3(spawner.GetRandomXPos(), -0.25f, spawner.GetRandomZPos());
                 state = BallState.Moving;
                 break;
             case BallState.Moving:

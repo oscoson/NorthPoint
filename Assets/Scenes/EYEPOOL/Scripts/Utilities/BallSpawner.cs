@@ -37,7 +37,7 @@ public class BallSpawner : MonoBehaviour
     void Awake()
     {
         ballPalette = ballPalleteAsset.GetEntries();
-        sinkBoundary = Mathf.Abs(xRange.x) - 3.5f;
+        sinkBoundary = Mathf.Abs(xRange.x) - 5f;
         audioManager = FindAnyObjectByType<AudioManager>();
     }
 
@@ -67,7 +67,7 @@ public class BallSpawner : MonoBehaviour
     private void SpawnEnergyBall()
     {
         int ballSeed = Random.Range(0, ballPalette.Length);
-        Vector3 pos = new(GetRandomXPos(), -3f, GetRandomZPos());
+        Vector3 pos = new(GetRandomXPos(), -0.25f, GetRandomZPos());
 
         GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
         newEnergyBall.AddComponent<EnergyBall>();
