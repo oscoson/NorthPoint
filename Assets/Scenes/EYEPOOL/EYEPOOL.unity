@@ -5955,9 +5955,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   augmentaManager: {fileID: 2007777193}
   minimumPresence: 1
+  redBallCount: 0
+  yellowBallCount: 0
+  greenBallCount: 0
+  purpleBallCount: 0
   ballPalleteAsset: {fileID: 11400000, guid: cc6986d4bba904d55978271ce7b0e1be, type: 2}
   ballsPerPerson: 4
   maxBallsInRoom: 20
+  ballsLeftToSpawn: 0
   ballCount: 0
   zeroFlag: 0
   xRange: {x: -13.9, y: 13.9}
@@ -11655,9 +11660,9 @@ Transform:
   m_GameObject: {fileID: 117749362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.83, y: -3.999999, z: -23.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 3.2200003, y: 1.6300011, z: -0.43000007}
+  m_LocalScale: {x: 1.9499999, y: 1.9499999, z: 2.3855333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2016325491}
   - {fileID: 1522214258}
@@ -32149,9 +32154,9 @@ Transform:
   m_GameObject: {fileID: 230009438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.47, y: -3.999999, z: -23.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 5.5200005, y: 1.6300011, z: -0.43000007}
+  m_LocalScale: {x: 1.9499999, y: 1.9499999, z: 2.3855333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 529161157}
   - {fileID: 1070457146}
@@ -33561,9 +33566,9 @@ Transform:
   m_GameObject: {fileID: 322231470}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.581997, y: -3.999999, z: -23.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 7.631997, y: 1.6300011, z: -0.43000007}
+  m_LocalScale: {x: 1.9499999, y: 1.9499999, z: 2.3855333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1949046023}
   - {fileID: 1095266350}
@@ -44087,7 +44092,7 @@ GameObject:
   - component: {fileID: 373095571}
   - component: {fileID: 373095573}
   - component: {fileID: 373095572}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thunder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49937,9 +49942,9 @@ Transform:
   m_GameObject: {fileID: 416287861}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9580002, y: -3.999999, z: -23.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 9.008, y: 1.6300011, z: -0.43000007}
+  m_LocalScale: {x: 1.9499999, y: 1.9499999, z: 2.3855333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 996301678}
   - {fileID: 1721407905}
@@ -92246,9 +92251,9 @@ Transform:
   m_GameObject: {fileID: 644128395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.46, y: -4, z: -23.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 11.51, y: 1.63, z: -0.43}
+  m_LocalScale: {x: 1.9499999, y: 1.9499999, z: 2.3855333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1276375148}
   - {fileID: 1184736060}
@@ -113235,7 +113240,7 @@ GameObject:
   - component: {fileID: 781081092}
   - component: {fileID: 781081094}
   - component: {fileID: 781081093}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thunder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236062,7 +236067,7 @@ MonoBehaviour:
   xrRendering: 1
   fullscreenPassthrough: 0
   allowDynamicResolution: 0
-  customRenderingSettings: 0
+  customRenderingSettings: 1
   invertFaceCulling: 0
   probeLayerMask:
     serializedVersion: 2
@@ -236105,7 +236110,7 @@ MonoBehaviour:
     materialQuality: 0
   renderingPathCustomFrameSettingsOverrideMask:
     mask:
-      data1: 0
+      data1: 131072
       data2: 0
   defaultFrameSettings: 0
   m_Version: 9
@@ -262040,9 +262045,9 @@ Transform:
   m_GameObject: {fileID: 1706602802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.948002, y: -3.999999, z: -23.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 12.998002, y: 1.6300011, z: -0.43000007}
+  m_LocalScale: {x: 1.9499999, y: 1.9499999, z: 2.3855333}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1594864642}
   - {fileID: 2141109218}
@@ -324829,7 +324834,7 @@ GameObject:
   - component: {fileID: 2040855807}
   - component: {fileID: 2040855809}
   - component: {fileID: 2040855808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thunder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330032,132 +330037,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!1 &2059406666
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2059406671}
-  - component: {fileID: 2059406670}
-  - component: {fileID: 2059406669}
-  - component: {fileID: 2059406668}
-  - component: {fileID: 2059406667}
-  m_Layer: 0
-  m_Name: Fake Plaer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &2059406667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059406666}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bba2d9c4042079640af149b710d901ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
-  snowRT: {fileID: 0}
-  spotSize: 5
---- !u!136 &2059406668
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059406666}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2059406669
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059406666}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: -876546973899608171, guid: 2676f11cd87f550419592d9e7088c1e4, type: 3}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2059406670
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059406666}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2059406671
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059406666}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.57, y: 1.62, z: -11.12}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062177258
 GameObject:
   m_ObjectHideFlags: 0
@@ -331896,7 +331775,7 @@ GameObject:
   - component: {fileID: 2132664893}
   - component: {fileID: 2132664895}
   - component: {fileID: 2132664894}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Thunder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341781,7 +341660,6 @@ SceneRoots:
   - {fileID: 204809292}
   - {fileID: 774094920}
   - {fileID: 1396862573}
-  - {fileID: 2059406671}
   - {fileID: 1365036069}
   - {fileID: 1701357475}
   - {fileID: 29576694}
