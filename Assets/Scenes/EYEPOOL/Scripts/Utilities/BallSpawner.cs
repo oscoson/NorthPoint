@@ -19,12 +19,14 @@ public class BallSpawner : MonoBehaviour
     public int purpleBallCount = 0;
 
     [Header("Ball Spawn Settings")]
+    public bool fastBallSpawned;
     [SerializeField] private BallPalette ballPalleteAsset;
     [SerializeField] private int ballsPerPerson = 4;
     [SerializeField] private int maxBallsInRoom = 20;
     [SerializeField] private int ballsLeftToSpawn;
     [SerializeField] private int ballCount;
     [SerializeField] private bool zeroFlag;
+    [SerializeField] private bool isSpawning;
     private static BallPalette.Entry[] ballPalette;
 
     [Header("Spawn Area Settings")]
@@ -110,22 +112,21 @@ public class BallSpawner : MonoBehaviour
                 }
                 break;
             default:
-                if(ballsLeftToSpawn > 0 && ballCount < maxBallsInRoom)
-                {
-                    SpawnEnergyBall();   
-                }
                 break;
         }
 
-        if(found)
+        if (found)
         {
             ballCount++; // Confirmed new ball spawn
             ballsLeftToSpawn--;
             Vector3 pos = new(GetRandomXPos(), -0.25f, GetRandomZPos());
             GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
-            newEnergyBall.AddComponent<EnergyBall>();
-            newEnergyBall.GetComponent<EnergyBall>().Initialise(newEnergyBall, ballSeed, ballPalette[ballSeed].material.color, ballPalette[ballSeed].captureSprite, ballPalette[ballSeed].spawnFX, this);   
+            newEnergyBall.GetComponent<EnergyBall>().Initialise(newEnergyBall, ballSeed, ballPalette[ballSeed].material.color, ballPalette[ballSeed].captureSprite, ballPalette[ballSeed].spawnFX, this);
         }
+        // else
+        // {
+        //     SpawnEnergyBall(); 
+        // }
 
 
         // Audio Manager Play
@@ -170,9 +171,9 @@ public class BallSpawner : MonoBehaviour
 
     private IEnumerator ConfirmPresenceAfterDelay(AugmentaObject obj, int id)
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
 
-        // If we're still tracking the object after 5 seconds, they didn't leave
+        // If we're still tracking the object after 2 seconds, they didn't leave
         if (presenceTimers.ContainsKey(id))
         {
             presenceTimers.Remove(id);
@@ -226,6 +227,16 @@ public class BallSpawner : MonoBehaviour
     public int GetBalls()
     {
         return ballCount;
+    }
+
+    public float GetMaxBallsInRoom()
+    {
+        return maxBallsInRoom;
+    }
+
+    public float GetBallsLeftToSpawn()
+    {
+        return ballsLeftToSpawn;
     }
 
     public float GetRandomXPos()

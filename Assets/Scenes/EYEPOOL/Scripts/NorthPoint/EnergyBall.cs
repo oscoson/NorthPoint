@@ -28,9 +28,12 @@ public class EnergyBall : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Vector3 newPos;
     [SerializeField] private BallSpawner spawner;
+    [SerializeField] private GameObject unattachedModel;
+    [SerializeField] private GameObject fastUnattachedModel;
+    [SerializeField] private GameObject attachedModel;
+    private bool isFastBall = false;
     private AudioManager audioManager;
     private Animator animator;
-
     public void Initialise(GameObject _ballObject, int _targetSinkID, Color _ballColor, Sprite _captureSprite, GameObject _captureEffect, BallSpawner ballSpawner)
     {
         ballObject = _ballObject;
@@ -42,8 +45,21 @@ public class EnergyBall : MonoBehaviour
 
         audioManager = FindAnyObjectByType<AudioManager>();
         animator = ballObject.GetComponent<Animator>();
-
-        speed = Random.Range(2, 5);
+        
+        float rate = Random.Range(0.05f, 1f);
+        // Gradually increase chance of fast ball spawning as more balls are in the room
+        if (!spawner.fastBallSpawned && (spawner.GetBallsLeftToSpawn() / spawner.GetMaxBallsInRoom()) <= rate)
+        {
+            unattachedModel.SetActive(false);
+            fastUnattachedModel.SetActive(true);
+            spawner.fastBallSpawned = true;
+            speed = Random.Range(8, 10);
+            isFastBall = true;
+        }
+        else
+        {
+            speed = Random.Range(2, 5);
+        }
     }
 
     // Update is called once per frame
@@ -108,8 +124,20 @@ public class EnergyBall : MonoBehaviour
         if (state == BallState.Attached) return;
 
         state = BallState.Attached;
+
+        if (isFastBall)
+        {
+            fastUnattachedModel.SetActive(false);
+            attachedModel.SetActive(true);
+        }
+        else
+        {
+            unattachedModel.SetActive(false);
+            attachedModel.SetActive(true);
+        }
+
         transform.SetParent(parent, true);
-        // transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = false; // hide ball sprite
+        transform.localPosition = Vector3.zero;
         personAttached = parent.GetComponent<AugmentaPickup>();
         personAttached.AttachBallRing(this);
         // Instantiate(splat, transform.position + new Vector3(-0.0125f, 0f, 0f), Quaternion.Euler(90, -90, 0)); // run the splat with offset
