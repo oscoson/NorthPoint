@@ -1063,6 +1063,12 @@ MonoBehaviour:
   ballsLeftToSpawn: 20
   ballCount: 0
   zeroFlag: 0
+  isSpawning: 0
+  availableOrbColors:
+  - Red
+  - Green
+  - Purple
+  - Yellow
   xRange: {x: -13.9, y: 13.9}
   xSpawnRange: 14
   zSpawnRange: 14
@@ -149989,7 +149995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.83
+      value: 3.67
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -149997,7 +150003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.53
+      value: -11.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -150057,7 +150063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c44bd25368358e04ea44cd8a7fc899bd, type: 3}
       propertyPath: m_TagString

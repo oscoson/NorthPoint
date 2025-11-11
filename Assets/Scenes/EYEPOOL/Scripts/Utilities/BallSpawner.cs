@@ -27,6 +27,7 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private int ballCount;
     [SerializeField] private bool zeroFlag;
     [SerializeField] private bool isSpawning;
+    [SerializeField] List<string> availableOrbColors = new List<string> { "Red", "Green", "Purple", "Yellow" };
     private static BallPalette.Entry[] ballPalette;
 
     [Header("Spawn Area Settings")]
@@ -79,36 +80,50 @@ public class BallSpawner : MonoBehaviour
 
     private void SpawnEnergyBall()
     {
-        int ballSeed = Random.Range(0, ballPalette.Length);
-        bool found = false;
-        switch (ballSeed)
+        if (availableOrbColors.Count == 0)
         {
-            case 0:
+            return; // All colors have reached max capacity
+        }
+
+        int ballSeed = 0;
+        string ballColor = availableOrbColors[Random.Range(0, availableOrbColors.Count)];
+        bool found = false;
+        switch (ballColor)
+        {
+            case "Purple":
                 if (purpleBallCount < 5)
                 {
                     purpleBallCount++;
+                    CheckMaxColourCapacity("Purple");
                     found = true;
+                    ballSeed = 0;
                 }
                 break;
-            case 1:
+            case "Green":
                 if (greenBallCount < 5)
                 {
                     greenBallCount++;
+                    CheckMaxColourCapacity("Green");
                     found = true;
+                    ballSeed = 1;
                 }
                 break;
-            case 2:
+            case "Yellow":
                 if (yellowBallCount < 5)
                 {
                     yellowBallCount++;
+                    CheckMaxColourCapacity("Yellow");
                     found = true;
+                    ballSeed = 2;
                 }
                 break;
-            case 3:
+            case "Red":
                 if (redBallCount < 5)
                 {
                     redBallCount++;
+                    CheckMaxColourCapacity("Red");
                     found = true;
+                    ballSeed = 3;
                 }
                 break;
             default:
@@ -217,6 +232,44 @@ public class BallSpawner : MonoBehaviour
         purpleBallCount = 0;
         ballCount = 0;
         ballsLeftToSpawn = maxBallsInRoom;
+        availableOrbColors = new List<string> { "Red", "Green", "Purple", "Yellow" };
+    }
+
+    private void CheckMaxColourCapacity(string color)
+    {
+        switch(color)
+        {
+            case "Purple":
+                if (purpleBallCount >= 5)
+                {
+                    Debug.Log("Removing Purple from available colors");
+                    availableOrbColors.Remove("Purple");
+                }
+                break;
+            case "Green":
+                if (greenBallCount >= 5)
+                {
+                    Debug.Log("Removing Green from available colors");
+                    availableOrbColors.Remove("Green");
+                }
+                break;
+            case "Yellow":
+                if (yellowBallCount >= 5)
+                {
+                    Debug.Log("Removing Yellow from available colors");
+                    availableOrbColors.Remove("Yellow");
+                }
+                break;
+            case "Red":
+                if (redBallCount >= 5)
+                {
+                    Debug.Log("Removing Red from available colors");
+                    availableOrbColors.Remove("Red");
+                }
+                break;
+            default:
+                break;
+        }
     }
 
     public float GetSinkBoundary()
