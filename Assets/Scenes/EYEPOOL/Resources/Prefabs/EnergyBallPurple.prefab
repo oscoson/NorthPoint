@@ -160,7 +160,7 @@ MonoBehaviour:
   newPos: {x: 0, y: 0, z: 0}
   spawner: {fileID: 0}
   unattachedModel: {fileID: 2668631256886877972}
-  fastUnattachedModel: {fileID: 0}
+  fastUnattachedModel: {fileID: 1772425566263457681}
   attachedModel: {fileID: 7390449489378882795}
 --- !u!1 &1437469872625039822
 GameObject:
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 3968367094815232415}
   - component: {fileID: 8385728406830361221}
   - component: {fileID: 6698763484638341261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5074,7 +5074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2345220422990673672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5109,7 +5109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5384315496411789791}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5146,7 +5146,7 @@ GameObject:
   - component: {fileID: 1273462356977528652}
   - component: {fileID: 8971727749236204680}
   - component: {fileID: 8834792000754822356}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10049,7 +10049,7 @@ GameObject:
   - component: {fileID: 8257647326746449618}
   - component: {fileID: 9090317613531967098}
   - component: {fileID: 4637763939122852068}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14895,7 +14895,7 @@ GameObject:
   - component: {fileID: 750543117635316206}
   - component: {fileID: 4654507184486180899}
   - component: {fileID: 9135903384892220055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19741,7 +19741,7 @@ GameObject:
   - component: {fileID: 8143139747318447904}
   - component: {fileID: 4686536862246607619}
   - component: {fileID: 4966045929847318900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24644,7 +24644,7 @@ GameObject:
   - component: {fileID: 2816827352080426322}
   - component: {fileID: 698009350449213603}
   - component: {fileID: 5434200752261457344}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29547,7 +29547,7 @@ GameObject:
   - component: {fileID: 2460048030117146359}
   - component: {fileID: 930698106690551731}
   - component: {fileID: 446197969822830359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34450,7 +34450,7 @@ GameObject:
   - component: {fileID: 4859057330546265969}
   - component: {fileID: 1222760238221570374}
   - component: {fileID: 8738988546144558038}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39353,7 +39353,7 @@ GameObject:
   - component: {fileID: 3891608867202897541}
   - component: {fileID: 4786817341487761325}
   - component: {fileID: 1484520349238786252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44256,7 +44256,7 @@ GameObject:
   - component: {fileID: 7533213027190701760}
   - component: {fileID: 1899649690228035316}
   - component: {fileID: 2723196352787888928}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49102,7 +49102,7 @@ GameObject:
   - component: {fileID: 5704414858554692457}
   - component: {fileID: 7495002986280350736}
   - component: {fileID: 7293569628661970619}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54003,7 +54003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4108614921626234145}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbPurple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54040,7 +54040,7 @@ GameObject:
   - component: {fileID: 872651170322387475}
   - component: {fileID: 2827822163124020226}
   - component: {fileID: 1059866741246761312}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3652776861605090644}
   - component: {fileID: 7010821365799224736}
   - component: {fileID: 2057798456813134971}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flare (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4912,7 +4912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6086747220802171517}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4949,7 +4949,7 @@ GameObject:
   - component: {fileID: 3672915535052513305}
   - component: {fileID: 4400238007044879516}
   - component: {fileID: 2130301129036198740}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9852,7 +9852,7 @@ GameObject:
   - component: {fileID: 3879497304905635459}
   - component: {fileID: 4232825425335538249}
   - component: {fileID: 4754309249467526624}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flare (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14755,7 +14755,7 @@ GameObject:
   - component: {fileID: 2641582168161027054}
   - component: {fileID: 916499415599288123}
   - component: {fileID: 3867415721571255987}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19599,7 +19599,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 883312892433583815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19639,7 +19639,7 @@ GameObject:
   - component: {fileID: 1622138007809943669}
   - component: {fileID: 4831287225562300937}
   - component: {fileID: 7416019597790927456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24542,7 +24542,7 @@ GameObject:
   - component: {fileID: 8791163046284014014}
   - component: {fileID: 5159830729990058536}
   - component: {fileID: 8875362949037228046}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29550,7 +29550,7 @@ GameObject:
   - component: {fileID: 4665407916124015185}
   - component: {fileID: 2225353227682027471}
   - component: {fileID: 7860865903975429269}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34451,7 +34451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3089878854683053092}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34488,7 +34488,7 @@ GameObject:
   - component: {fileID: 7530188075218083391}
   - component: {fileID: 5081866693272565162}
   - component: {fileID: 4961835755543737750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39391,7 +39391,7 @@ GameObject:
   - component: {fileID: 5315511835324837638}
   - component: {fileID: 7525300480192588702}
   - component: {fileID: 1672026560322823539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44237,7 +44237,7 @@ GameObject:
   - component: {fileID: 6839706813672825813}
   - component: {fileID: 227490705058033375}
   - component: {fileID: 5363357851989355551}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49140,7 +49140,7 @@ GameObject:
   - component: {fileID: 780647690514270024}
   - component: {fileID: 9129450037154079350}
   - component: {fileID: 8799331133031790151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54043,7 +54043,7 @@ GameObject:
   - component: {fileID: 6853705801222870451}
   - component: {fileID: 2475156691787428334}
   - component: {fileID: 345399996401883024}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flare (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58946,7 +58946,7 @@ GameObject:
   - component: {fileID: 691555724863559629}
   - component: {fileID: 5857615764931230140}
   - component: {fileID: 2130289829253954576}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63849,7 +63849,7 @@ GameObject:
   - component: {fileID: 864775419599174399}
   - component: {fileID: 4171158871763371622}
   - component: {fileID: 7730353370572554683}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68752,7 +68752,7 @@ GameObject:
   - component: {fileID: 8890696627783248187}
   - component: {fileID: 5046125595166493569}
   - component: {fileID: 3217157616283239952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}

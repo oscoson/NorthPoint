@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1883417790064536232}
   - component: {fileID: 168514736693660048}
   - component: {fileID: 2296751900763712790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4914,7 +4914,7 @@ GameObject:
   - component: {fileID: 984253167517978974}
   - component: {fileID: 4370591023565307257}
   - component: {fileID: 7049802086012763232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9760,7 +9760,7 @@ GameObject:
   - component: {fileID: 4413801941014561934}
   - component: {fileID: 3244109452854542194}
   - component: {fileID: 5174638847176147165}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14604,7 +14604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3086791310922033498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14641,7 +14641,7 @@ GameObject:
   - component: {fileID: 6571442204679878232}
   - component: {fileID: 7278471349917027416}
   - component: {fileID: 9209199264882035367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19542,7 +19542,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2565168071529753765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19579,7 +19579,7 @@ GameObject:
   - component: {fileID: 7691867741347733083}
   - component: {fileID: 2536221490399326036}
   - component: {fileID: 2079746958715226257}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24482,7 +24482,7 @@ GameObject:
   - component: {fileID: 1715097623926341358}
   - component: {fileID: 8967897054034055217}
   - component: {fileID: 3623652935885556748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29385,7 +29385,7 @@ GameObject:
   - component: {fileID: 7394776130340997022}
   - component: {fileID: 7275512309601322447}
   - component: {fileID: 7956836711266470192}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34288,7 +34288,7 @@ GameObject:
   - component: {fileID: 208486129079994500}
   - component: {fileID: 7232730020851238443}
   - component: {fileID: 499802257767101232}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39189,7 +39189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3183995796889747186}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: OrbIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39230,7 +39230,7 @@ GameObject:
   - component: {fileID: 4933028414358981985}
   - component: {fileID: 5479011447630585934}
   - component: {fileID: 3867889215432081394}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnergyBallYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39388,7 +39388,7 @@ GameObject:
   - component: {fileID: 4993614328938544947}
   - component: {fileID: 1856226276722467226}
   - component: {fileID: 7217416788128437957}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44291,7 +44291,7 @@ GameObject:
   - component: {fileID: 4392978525568569228}
   - component: {fileID: 3904009908367859533}
   - component: {fileID: 4636301822784833304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trails
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49137,7 +49137,7 @@ GameObject:
   - component: {fileID: 5122722353331087617}
   - component: {fileID: 5590511218722972402}
   - component: {fileID: 1421763223165576649}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShineLightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54040,7 +54040,7 @@ GameObject:
   - component: {fileID: 203536295918847159}
   - component: {fileID: 6393429288852535208}
   - component: {fileID: 6967730226937243876}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
