@@ -126,8 +126,7 @@ namespace Augmenta
 		        return;
 
             Destroy(_augmentaObjectMaterialInstance);
-            FindAnyObjectByType<TunnelTrigger>()?.usersInZone.Remove(this);
-            FindAnyObjectByType<FigureOpacity>()?.usersInZone.Remove(this);
+            FindAnyObjectByType<FrostHandler>()?.usersInZone.Remove(this);
             //Destroy custom object
             DestroyCustomObject();
 
