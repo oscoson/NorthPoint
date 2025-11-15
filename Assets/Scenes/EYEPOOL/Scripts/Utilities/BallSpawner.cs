@@ -12,11 +12,15 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private float minimumPresence = 1f;
     private Dictionary<int, Coroutine> presenceTimers = new Dictionary<int, Coroutine>();
 
-    [Header("Contaiment Box Population")]
-    public int redBallCount = 0;
-    public int yellowBallCount = 0;
-    public int greenBallCount = 0;
-    public int purpleBallCount = 0;
+    [Header("Containment Box Population")]
+    public int redBallsSpawned = 0;
+    public int yellowBallsSpawned = 0;
+    public int greenBallsSpawned = 0;
+    public int purpleBallsSpawned = 0;
+    public int redBallsCaptured = 0;
+    public int yellowBallsCaptured = 0;
+    public int greenBallsCaptured = 0;
+    public int purpleBallsCaptured = 0;
 
     [Header("Ball Spawn Settings")]
     public bool fastBallSpawned;
@@ -37,7 +41,8 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private float zSpawnRange;
     // [SerializeField] private Vector2 yRange = new Vector2(-13.9f, 13.9f);
 
-    private GameObject spawnEffect;
+    // private GameObject spawnEffect;
+    private GameManager gameManager;
     private AudioManager audioManager;
 
     private float sinkBoundary;
@@ -49,6 +54,7 @@ public class BallSpawner : MonoBehaviour
         sinkBoundary = Mathf.Abs(xRange.x) - 5f;
         ballsLeftToSpawn = maxBallsInRoom;
         audioManager = FindAnyObjectByType<AudioManager>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
 
     void Start()
@@ -91,36 +97,36 @@ public class BallSpawner : MonoBehaviour
         switch (ballColor)
         {
             case "Purple":
-                if (purpleBallCount < 5)
+                if (purpleBallsSpawned < 5)
                 {
-                    purpleBallCount++;
+                    purpleBallsSpawned++;
                     CheckMaxColourCapacity("Purple");
                     found = true;
                     ballSeed = 0;
                 }
                 break;
             case "Green":
-                if (greenBallCount < 5)
+                if (greenBallsSpawned < 5)
                 {
-                    greenBallCount++;
+                    greenBallsSpawned++;
                     CheckMaxColourCapacity("Green");
                     found = true;
                     ballSeed = 1;
                 }
                 break;
             case "Yellow":
-                if (yellowBallCount < 5)
+                if (yellowBallsSpawned < 5)
                 {
-                    yellowBallCount++;
+                    yellowBallsSpawned++;
                     CheckMaxColourCapacity("Yellow");
                     found = true;
                     ballSeed = 2;
                 }
                 break;
             case "Red":
-                if (redBallCount < 5)
+                if (redBallsSpawned < 5)
                 {
-                    redBallCount++;
+                    redBallsSpawned++;
                     CheckMaxColourCapacity("Red");
                     found = true;
                     ballSeed = 3;
@@ -136,7 +142,7 @@ public class BallSpawner : MonoBehaviour
             ballsLeftToSpawn--;
             Vector3 pos = new(GetRandomXPos(), -0.25f, GetRandomZPos());
             GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
-            newEnergyBall.GetComponent<EnergyBall>().Initialise(newEnergyBall, ballSeed, ballPalette[ballSeed].material.color, ballPalette[ballSeed].captureSprite, ballPalette[ballSeed].spawnFX, this);
+            newEnergyBall.GetComponent<EnergyBall>().Initialise(newEnergyBall, ballSeed, ballPalette[ballSeed].material.color, ballPalette[ballSeed].captureSprite, ballPalette[ballSeed].spawnFX, this, ballColor);
         }
         // else
         // {
@@ -170,7 +176,7 @@ public class BallSpawner : MonoBehaviour
         int id = obj.id;
         if (obj.GetComponentInChildren<EnergyBall>() != null)
         {
-            Debug.Log("DELETING");
+            RestorePopulationCount(obj.GetComponentInChildren<EnergyBall>().ballColorName);
             DestroyBall(obj.GetComponentInChildren<EnergyBall>());
         }
         // can put else statement here if we want Balls to despawn when player leaves
@@ -226,13 +232,20 @@ public class BallSpawner : MonoBehaviour
 
     private void ResetTerminalGoals()
     {
-        redBallCount = 0;
-        yellowBallCount = 0;
-        greenBallCount = 0;
-        purpleBallCount = 0;
+        redBallsSpawned = 0;
+        yellowBallsSpawned = 0;
+        greenBallsSpawned = 0;
+        purpleBallsSpawned = 0;
+        redBallsCaptured = 0;
+        yellowBallsCaptured = 0;
+        greenBallsCaptured = 0;
+        purpleBallsCaptured = 0;
         ballCount = 0;
+
         ballsLeftToSpawn = maxBallsInRoom;
         availableOrbColors = new List<string> { "Red", "Green", "Purple", "Yellow" };
+
+        gameManager.DeactivateAllLights();
     }
 
     private void CheckMaxColourCapacity(string color)
@@ -240,28 +253,28 @@ public class BallSpawner : MonoBehaviour
         switch(color)
         {
             case "Purple":
-                if (purpleBallCount >= 5)
+                if (purpleBallsSpawned >= 5)
                 {
                     Debug.Log("Removing Purple from available colors");
                     availableOrbColors.Remove("Purple");
                 }
                 break;
             case "Green":
-                if (greenBallCount >= 5)
+                if (greenBallsSpawned >= 5)
                 {
                     Debug.Log("Removing Green from available colors");
                     availableOrbColors.Remove("Green");
                 }
                 break;
             case "Yellow":
-                if (yellowBallCount >= 5)
+                if (yellowBallsSpawned >= 5)
                 {
                     Debug.Log("Removing Yellow from available colors");
                     availableOrbColors.Remove("Yellow");
                 }
                 break;
             case "Red":
-                if (redBallCount >= 5)
+                if (redBallsSpawned >= 5)
                 {
                     Debug.Log("Removing Red from available colors");
                     availableOrbColors.Remove("Red");
@@ -270,6 +283,54 @@ public class BallSpawner : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    public void SetLight(string colorName)
+    {
+        switch(colorName)
+        {
+            case "Green":
+                greenBallsCaptured++;
+                gameManager.ActivateLights("Green", greenBallsCaptured - 1);
+                break;
+            case "Red":
+                redBallsCaptured++;
+                gameManager.ActivateLights("Red", redBallsCaptured - 1);
+                break;
+            case "Yellow":
+                yellowBallsCaptured++;
+                gameManager.ActivateLights("Yellow", yellowBallsCaptured - 1);
+                break;
+            case "Purple":
+                purpleBallsCaptured++;
+                gameManager.ActivateLights("Purple", purpleBallsCaptured - 1);
+                break;
+        }
+    }
+
+    public void RestorePopulationCount(string colorName)
+    {
+        if (!availableOrbColors.Contains(colorName))
+        {
+            Debug.Log("Restoring " + colorName + " to available colors");
+            availableOrbColors.Add(colorName);
+        }
+        switch(colorName)
+        {
+            case "Green":
+                greenBallsSpawned--;
+                break;
+            case "Red":
+                redBallsSpawned--;
+                break;
+            case "Yellow":
+                yellowBallsSpawned--;
+                break;
+            case "Purple":
+                purpleBallsSpawned--;
+                break;
+        }
+        ballsLeftToSpawn++;
     }
 
     public float GetSinkBoundary()

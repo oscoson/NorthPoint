@@ -6,6 +6,7 @@ public class EnergyBall : MonoBehaviour
     public GameObject ballObject { get; private set; }
     public int targetSinkID { get; private set; }
     public Color ballColor { get; private set; }
+    public string ballColorName { get; private set; }
     public Sprite captureSprite { get; private set; }
     public GameObject captureEffect { get; private set; }
 
@@ -34,7 +35,7 @@ public class EnergyBall : MonoBehaviour
     private bool isFastBall = false;
     private AudioManager audioManager;
     private Animator animator;
-    public void Initialise(GameObject _ballObject, int _targetSinkID, Color _ballColor, Sprite _captureSprite, GameObject _captureEffect, BallSpawner ballSpawner)
+    public void Initialise(GameObject _ballObject, int _targetSinkID, Color _ballColor, Sprite _captureSprite, GameObject _captureEffect, BallSpawner ballSpawner, string ballColorString)
     {
         ballObject = _ballObject;
         targetSinkID = _targetSinkID;
@@ -42,6 +43,7 @@ public class EnergyBall : MonoBehaviour
         captureSprite = _captureSprite;
         captureEffect = _captureEffect;
         spawner = ballSpawner;
+        ballColorName = ballColorString;
 
         audioManager = FindAnyObjectByType<AudioManager>();
         animator = ballObject.GetComponent<Animator>();
@@ -157,6 +159,7 @@ public class EnergyBall : MonoBehaviour
             state = BallState.Hovering;
             transform.SetParent(null, true);
             personAttached.DropBall();
+            spawner.SetLight(ballColorName);
             // PlayDropOffSound(targetSinkID);
             float delay = Random.Range(1f, 8f);
             spawner.DestroyBall(this);
