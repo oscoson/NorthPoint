@@ -29161,7 +29161,7 @@ GameObject:
   - component: {fileID: 353761623}
   - component: {fileID: 353761622}
   - component: {fileID: 353761621}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: YellowPaperB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51315,7 +51315,7 @@ GameObject:
   - component: {fileID: 490513620}
   - component: {fileID: 490513619}
   - component: {fileID: 490513618}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: YellowPaperD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129231,7 +129231,7 @@ GameObject:
   - component: {fileID: 1124034314}
   - component: {fileID: 1124034313}
   - component: {fileID: 1124034312}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: YellowPaperA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171273,7 +171273,7 @@ GameObject:
   - component: {fileID: 1674370874}
   - component: {fileID: 1674370873}
   - component: {fileID: 1674370872}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: YellowPaperC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
