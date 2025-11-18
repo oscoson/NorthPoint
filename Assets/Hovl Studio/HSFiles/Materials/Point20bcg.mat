@@ -139,14 +139,14 @@ Material:
     - _CullModeForward: 0
     - _Cutoff: 0.5
     - _DepthOffsetEnable: 0
-    - _Depthpower: 1
+    - _Depthpower: 3.4
     - _DetailNormalMapScale: 1
     - _DoubleSidedEnable: 1
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _DstBlend2: 10
-    - _Emission: 1
+    - _Emission: 0.82
     - _EnableBlendModePreserveSpecularLighting: 0
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
@@ -156,7 +156,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 1
+    - _Opacity: 0.5
     - _OpaqueCullMode: 2
     - _Parallax: 0.02
     - _PerPixelSorting: 0
@@ -194,7 +194,7 @@ Material:
     - _ZWrite: 0
     - _ZWriteControl: 0
     m_Colors:
-    - _Color: {r: 0.43527526, g: 0.43527526, b: 0.43527526, a: 1}
+    - _Color: {r: 0.26794338, g: 0.26794338, b: 0.26794338, a: 1}
     - _DistortionSpeedXYPowerZ: {r: 0, g: 0, b: 0, a: 0}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
