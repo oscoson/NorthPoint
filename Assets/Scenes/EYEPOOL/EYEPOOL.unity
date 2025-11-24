@@ -17518,10 +17518,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1670030728}
   - {fileID: 857505481}
-  - {fileID: 398124151}
-  - {fileID: 1930080991}
-  - {fileID: 1372451216}
   - {fileID: 648344351}
   - {fileID: 1413647377}
   - {fileID: 1093640378}
@@ -41014,12 +41012,12 @@ Transform:
   m_GameObject: {fileID: 398124150}
   serializedVersion: 2
   m_LocalRotation: {x: -0.023597913, y: 0.70671296, z: -0.023597913, w: 0.70671296}
-  m_LocalPosition: {x: 19.87, y: 6.6, z: -7.7}
-  m_LocalScale: {x: 0.20970005, y: 0.20970002, z: 0.20970003}
+  m_LocalPosition: {x: -0.12999916, y: 0.5999999, z: 1.3000002}
+  m_LocalScale: {x: 0.20970008, y: 0.20970003, z: 0.20970005}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 692402521}
-  m_Father: {fileID: 196281374}
+  m_Father: {fileID: 1670030728}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &398124152
 Animator:
@@ -81977,7 +81975,595 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ce1955575ed1449a0615978324c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: 
+    clip: {fileID: 0}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 0
+    mixer: {fileID: 0}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: CRT_SCREEN
+    clip: {fileID: 8300000, guid: 19bb1cedfa58f7a498ade6d6b6f8e763, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: THUNDERSTORM
+    clip: {fileID: 8300000, guid: 109b5686b7ab19b4ca67a14d12e3859c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0
+    useFadeOut: 0
+    fadeOutTime: 0
+    source: {fileID: 0}
+  - name: BGM
+    clip: {fileID: 8300000, guid: 0e63686946ed5c941bc9a209d8e919a7, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 1
+    playAsOneShot: 0
+    mixer: {fileID: -7063479709075668813, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
 --- !u!4 &774094920
 Transform:
   m_ObjectHideFlags: 0
@@ -161474,12 +162060,12 @@ Transform:
   m_GameObject: {fileID: 1372451215}
   serializedVersion: 2
   m_LocalRotation: {x: 0.011782596, y: 0.70700866, z: 0.011782596, w: 0.70700866}
-  m_LocalPosition: {x: 19.3, y: 6, z: -10.1}
-  m_LocalScale: {x: 0.2097, y: 0.20970002, z: 0.20970003}
+  m_LocalPosition: {x: -0.70000076, y: 0, z: -1.1000004}
+  m_LocalScale: {x: 0.20969999, y: 0.20970003, z: 0.20970005}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1339205880}
-  m_Father: {fileID: 196281374}
+  m_Father: {fileID: 1670030728}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1372451217
 Animator:
@@ -185164,7 +185750,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: bdbf0579e1840ce488a4f9537c459d20, type: 3}
   m_Resource: {fileID: 8300000, guid: bdbf0579e1840ce488a4f9537c459d20, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -186144,6 +186730,138 @@ Transform:
   m_Children: []
   m_Father: {fileID: 294676485}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1670030727
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1670030728}
+  - component: {fileID: 1670030729}
+  m_Layer: 0
+  m_Name: CORKBOARD PAPER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1670030728
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670030727}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 20, y: 6, z: -9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 398124151}
+  - {fileID: 1930080991}
+  - {fileID: 1372451216}
+  m_Father: {fileID: 196281374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1670030729
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670030727}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2738e8743d4165347a738b700d5d472c, type: 3}
+  m_Resource: {fileID: 8300000, guid: 2738e8743d4165347a738b700d5d472c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.52
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.7
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1676662595
 GameObject:
   m_ObjectHideFlags: 0
@@ -215302,12 +216020,12 @@ Transform:
   m_GameObject: {fileID: 1930080990}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0062413113, y: 0.70707923, z: 0.0062413113, w: 0.70707923}
-  m_LocalPosition: {x: 19.87, y: 5.1, z: -7.7}
+  m_LocalPosition: {x: -0.12999916, y: -0.9000001, z: 1.3000002}
   m_LocalScale: {x: 0.20970002, y: 0.2097, z: 0.20970002}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1203758811}
-  m_Father: {fileID: 196281374}
+  m_Father: {fileID: 1670030728}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &1930080992
 Animator:
