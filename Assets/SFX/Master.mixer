@@ -47,6 +47,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-1787508442179022067
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 08fe68f3a806e27428c6c3d0814d6002
+  m_EffectName: Attenuation
+  m_MixLevel: 7d5f5b0bfcc28014480b4715a2dc1316
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -63,6 +77,8 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: f21c98b9f4a979f4398bc3dbd216f0a6
+    name: EASTER
   - guid: b5e45870a0705ff49b1ab905068dc416
     name: MASTER
   - guid: 673510d1109526c48b7e983a851885a4
@@ -74,6 +90,7 @@ AudioMixerController:
     - 7922e9459a424334ea0ab301913c6f06
     - 48ef43a57f1c4b74e9f8e5b21ebc24d3
     - b45e3044c4b287e48810846a1092c172
+    - 1779fd33e88b92942b470a4a11b547c3
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -89,6 +106,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 388316501941469680}
   - {fileID: -7063479709075668813}
+  - {fileID: 2163872645658760882}
   m_Volume: b5e45870a0705ff49b1ab905068dc416
   m_Pitch: 16737ebe8e9d66b46a90397685c6b129
   m_Send: 00000000000000000000000000000000
@@ -121,7 +139,9 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: a7e9934acb6192d4e8b07a52f143aded
-  m_FloatValues: {}
+  m_FloatValues:
+    673510d1109526c48b7e983a851885a4: -10.345207
+    5abd3e922139a0b4a840461dd8132a23: -3.1841109
   m_TransitionOverrides: {}
 --- !u!243 &388316501941469680
 AudioMixerGroupController:
@@ -138,6 +158,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -6495114140499360380}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &2163872645658760882
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Easter Eggs
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 1779fd33e88b92942b470a4a11b547c3
+  m_Children: []
+  m_Volume: f21c98b9f4a979f4398bc3dbd216f0a6
+  m_Pitch: a1ec83f431445c149803432a9ebbeeac
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -1787508442179022067}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
