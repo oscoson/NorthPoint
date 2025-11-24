@@ -81976,541 +81976,469 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
+  - name: WINDOW_FROST_1
+    clip: {fileID: 8300000, guid: cf2968eceb358ea44b47678f90a5c9b3, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
+  - name: WINDOW_FROST_2
+    clip: {fileID: 8300000, guid: 208eb7133d8a5854da3889a4ce7e5f93, type: 3}
+    volume: 0.6
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: WINDOW_FROST_3
+    clip: {fileID: 8300000, guid: 53aa77ac006f4e949b3c63b7e4c4b2bc, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: WINDOW_FROST_4
+    clip: {fileID: 8300000, guid: 80db5dba488124e4aa114b335860b0c0, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: WINDOW_FROST_5
+    clip: {fileID: 8300000, guid: 03dda7c2dd7821841bce02532d871e6b, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_1
+    clip: {fileID: 8300000, guid: 3087482d692ba234ab82a57613374db1, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_2
+    clip: {fileID: 8300000, guid: 068ddb39efb03ac45a48a0ab377633af, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_3
+    clip: {fileID: 8300000, guid: 2c696bf7b57074a4fa450c5daf1c35eb, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_4
+    clip: {fileID: 8300000, guid: d5a5e75e803665f41b4112dbeb6a0d6c, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_5
+    clip: {fileID: 8300000, guid: e5bdd5a5123ac30408039ec0731beea2, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_6
+    clip: {fileID: 8300000, guid: 310b2f62e5869ca4eadcdae9533a9547, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_7
+    clip: {fileID: 8300000, guid: f515b1c7d117c6f43a62004546339a7d, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: TVGLITCH_8
+    clip: {fileID: 8300000, guid: c9c0606204ce928428831f633c195b2c, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 2163872645658760882, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ELEC_1
+    clip: {fileID: 8300000, guid: 29b7a0b5fb8f0c44bb781fda126e6072, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0.1
     useFadeOut: 0
     fadeOutTime: 0.1
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ELEC_2
+    clip: {fileID: 8300000, guid: 2ab1511154351bb4aacc004fec071127, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: ELEC_3
+    clip: {fileID: 8300000, guid: 21bdd4dcb578d8a4281090d5da10a7a3, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: ELEC_4
+    clip: {fileID: 8300000, guid: 3c3e89296d398924f942d98897900b57, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: COMPNOISE_1
+    clip: {fileID: 8300000, guid: e04a93b4edf61b744bbff5ec6ea607c5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: COMPNOISE_2
+    clip: {fileID: 8300000, guid: 2fe5261e190e660498a4eb0555013a39, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: COMPNOISE_3
+    clip: {fileID: 8300000, guid: d69ed075059739440b52bb989e510e09, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
+    useFadeIn: 0
+    fadeInTime: 0.1
+    useFadeOut: 0
+    fadeOutTime: 0.1
+    source: {fileID: 0}
+  - name: COMPNOISE_4
+    clip: {fileID: 8300000, guid: 0c33b8242b5bfa142b98aa7677294af4, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: COMPNOISE_5
+    clip: {fileID: 8300000, guid: 0e1b20b0dfca25a4989dc787a1f626a6, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: COMPNOISE_6
+    clip: {fileID: 8300000, guid: e08d7a245cb4d4d4d8d7147fa8bde52e, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_APPEAR_1
+    clip: {fileID: 8300000, guid: b418016602e2707439d0ce57fe0e20c1, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_APPEAR_2
+    clip: {fileID: 8300000, guid: 7786fbaaf20345849860e147d6c162b2, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_APPEAR_3
+    clip: {fileID: 8300000, guid: c79c5cda25ff4c549b4aead6985bd77e, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_APPEAR_4
+    clip: {fileID: 8300000, guid: 4ea101f43dcdf704f830422f75ff4285, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_APPEAR_5
+    clip: {fileID: 8300000, guid: c8e9c0b2a0af49749adb163162e40bf9, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_APPEAR_6
+    clip: {fileID: 8300000, guid: 360bcdfa720d96540bb91c3b75c9b437, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DROP_ORB_1
+    clip: {fileID: 8300000, guid: bbbb3fbf6cb438f42994ce4f47d7c203, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DROP_ORB_2
+    clip: {fileID: 8300000, guid: 8c6a7453a260aaf40a814f954818e772, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DROP_ORB_3
+    clip: {fileID: 8300000, guid: 9b062968aaf2b794b85148d3a3ef82d8, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DROP_ORB_4
+    clip: {fileID: 8300000, guid: 6f6f8e70c2a454a4ca382ff37a9324a2, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_LOCKON_1
+    clip: {fileID: 8300000, guid: c19910090b5d9c145a4beaf4ca0e23da, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: ORB_LOCKON_2
+    clip: {fileID: 8300000, guid: 02ca9d1b6e248da48b7138dcc1c98cc2, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DIAL_1
+    clip: {fileID: 8300000, guid: 99bf82be3c61c4947a094faf8c746c36, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DIAL_2
+    clip: {fileID: 8300000, guid: 06e458d5d45a57e47a8b9a9600c43520, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DIAL_3
+    clip: {fileID: 8300000, guid: 735bea0ae64422642bf8671885e7034e, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
     fadeOutTime: 0
     source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
+  - name: DIAL_4
+    clip: {fileID: 8300000, guid: 8b4e2c78a8de58f4ca424f0812115270, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
-    useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
-    source: {fileID: 0}
-  - name: 
-    clip: {fileID: 0}
-    volume: 0.5
-    pitch: 1
-    loop: 0
-    playAsOneShot: 0
-    mixer: {fileID: 0}
+    playAsOneShot: 1
+    mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
     fadeInTime: 0
     useFadeOut: 0
@@ -82530,7 +82458,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CRT_SCREEN
     clip: {fileID: 8300000, guid: 19bb1cedfa58f7a498ade6d6b6f8e763, type: 3}
-    volume: 0.5
+    volume: 0.63
     pitch: 1
     loop: 1
     playAsOneShot: 0
@@ -82542,7 +82470,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: THUNDERSTORM
     clip: {fileID: 8300000, guid: 109b5686b7ab19b4ca67a14d12e3859c, type: 3}
-    volume: 0.5
+    volume: 0.8
     pitch: 1
     loop: 1
     playAsOneShot: 0
@@ -84349,6 +84277,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1826545780}
+  - {fileID: 1180360758}
   - {fileID: 415573976}
   - {fileID: 533883782}
   m_Father: {fileID: 1321608169}
@@ -138646,6 +138575,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1365036069}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1152623814
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 889197533}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 46274063437182e4e9bd5c1a108109aa, type: 2}
+    - target: {fileID: 919132149155446097, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_Name
+      value: CircleType2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      propertyPath: m_TagString
+      value: SnowGround
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1180360761}
+  m_SourcePrefab: {fileID: 100100000, guid: 48562eb005cb84a438e41baa84415011, type: 3}
 --- !u!1 &1153600160
 GameObject:
   m_ObjectHideFlags: 0
@@ -144354,6 +144371,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 17.00094}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
+--- !u!1 &1180360757 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+  m_PrefabInstance: {fileID: 1152623814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1180360758 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 48562eb005cb84a438e41baa84415011, type: 3}
+  m_PrefabInstance: {fileID: 1152623814}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180360761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180360757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5fc07582e437e94b9f20c755732df76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snowComputeShader: {fileID: 7200000, guid: e2b8524366ce7474d9c78957d74fa56e, type: 3}
+  snowRT: {fileID: 0}
+  colorValueToAdd: 0.0025
+  resolution: 512
 --- !u!1 &1190836421
 GameObject:
   m_ObjectHideFlags: 0
@@ -213709,15 +213752,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 17.53
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 17.53
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 17.53
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -213725,7 +213768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -213778,6 +213821,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_Name
       value: CircleType1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 294304ca46e45c74394662765151cfb9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 294304ca46e45c74394662765151cfb9, type: 3}
       propertyPath: m_TagString

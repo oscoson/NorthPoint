@@ -32,15 +32,6 @@ public class Sound
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Play("Game Start");
-        Play("Main Theme");
-        Play("Portal Sound");
-        Play("Fireplace");
-    }
     
     void Awake()
     {
@@ -55,6 +46,12 @@ public class AudioManager : MonoBehaviour
             s.source.outputAudioMixerGroup = s.mixer;
         }
         
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        BackgroundSounds();
     }
 
     public void Play(string name)
@@ -84,7 +81,10 @@ public class AudioManager : MonoBehaviour
     public void PlayPoint(string name, Vector3 position)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        
         if (s == null) return;
+
+        s.source.spatialBlend = 1.0f; 
         AudioSource.PlayClipAtPoint(s.clip, position, s.volume);
     }
 
@@ -145,6 +145,14 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null) return;
         StartCoroutine(FadeOut(s, fadeTime));
+    }
+
+    private void BackgroundSounds()
+    {
+        Play("BGM");
+        Play("THUNDERSTORM");
+        Play("CRT_SCREEN");
+        Play("NOTES_FLYING");
     }
     
     private IEnumerator FadeIn(Sound sound, float fadeTime)
