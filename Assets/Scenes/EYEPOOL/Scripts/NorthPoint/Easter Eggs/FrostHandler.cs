@@ -14,6 +14,8 @@ public class FrostHandler : MonoBehaviour
     public Color frostEffectObjectFive;
     public Color frostEffectObjectSix;
 
+    private AudioManager audioManager;
+
     void Awake()
     {
         frostEffectObjectOne = frostEffectObjects[0].GetComponent<SpriteRenderer>().color;
@@ -22,6 +24,8 @@ public class FrostHandler : MonoBehaviour
         frostEffectObjectFour = frostEffectObjects[3].GetComponent<SpriteRenderer>().color;
         frostEffectObjectFive = frostEffectObjects[4].GetComponent<SpriteRenderer>().color;
         frostEffectObjectSix = frostEffectObjects[5].GetComponent<SpriteRenderer>().color;
+
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     void Update()
@@ -66,6 +70,10 @@ public class FrostHandler : MonoBehaviour
         {
             
             usersInZone.Add(augmenta);
+            if(usersInZone.Count == 1)
+            {
+                PlayFrostSound();   
+            }
         }
     }
 
@@ -79,6 +87,33 @@ public class FrostHandler : MonoBehaviour
         else
         {
             usersInZone.Remove(augmenta);
+        }
+    }
+
+    void PlayFrostSound()
+    {
+        int randInt = Random.Range(1, 6);
+
+        switch(randInt)
+        {
+            case 1:
+                audioManager.PlayPoint("WINDOW_FROST_1", transform.position);
+                break;
+            case 2:
+                audioManager.PlayPoint("WINDOW_FROST_2", transform.position);
+                break;
+            case 3:
+                audioManager.PlayPoint("WINDOW_FROST_3", transform.position);
+                break;
+            case 4:
+                audioManager.PlayPoint("WINDOW_FROST_4", transform.position);
+                break;
+            case 5:
+                audioManager.PlayPoint("WINDOW_FROST_5", transform.position);
+                break;
+            default:
+                audioManager.PlayPoint("WINDOW_FROST_1", transform.position);
+                break;
         }
     }
 }

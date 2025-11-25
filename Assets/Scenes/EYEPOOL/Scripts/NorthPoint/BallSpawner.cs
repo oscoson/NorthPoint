@@ -43,7 +43,6 @@ public class BallSpawner : MonoBehaviour
 
     // private GameObject spawnEffect;
     private GameManager gameManager;
-    private AudioManager audioManager;
 
     private float sinkBoundary;
 
@@ -53,7 +52,6 @@ public class BallSpawner : MonoBehaviour
         ballPalette = ballPalleteAsset.GetEntries();
         sinkBoundary = Mathf.Abs(xRange.x) - 5f;
         ballsLeftToSpawn = maxBallsInRoom;
-        audioManager = FindAnyObjectByType<AudioManager>();
         gameManager = FindAnyObjectByType<GameManager>();
     }
 

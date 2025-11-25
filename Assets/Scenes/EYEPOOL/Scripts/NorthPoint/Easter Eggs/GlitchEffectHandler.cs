@@ -3,10 +3,12 @@ using Augmenta;  // Required for AugmentaObject
 public class GlitchEffectHandler : MonoBehaviour
 {
     private SpriteRenderer glitchEffectObject;
+    private AudioManager audioManager;
 
     void Awake()
     {
         glitchEffectObject = gameObject.GetComponent<SpriteRenderer>();
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -24,6 +26,7 @@ public class GlitchEffectHandler : MonoBehaviour
         else
         {
             glitchEffectObject.enabled = true;
+            PlayGlitchSound();
         }
     }
 
@@ -41,6 +44,42 @@ public class GlitchEffectHandler : MonoBehaviour
         else
         {
             glitchEffectObject.enabled = false;
+        }
+    }
+
+    void PlayGlitchSound()
+    {
+        int randInt = Random.Range(1, 9);
+
+        switch (randInt)
+        {
+            case 1:
+                audioManager.PlayPoint("TVGLITCH_1", transform.position);
+                break;
+            case 2:
+                audioManager.PlayPoint("TVGLITCH_2", transform.position);
+                break;
+            case 3:
+                audioManager.PlayPoint("TVGLITCH_3", transform.position);
+                break;
+            case 4:
+                audioManager.PlayPoint("TVGLITCH_4", transform.position);
+                break;
+            case 5:
+                audioManager.PlayPoint("TVGLITCH_5", transform.position);
+                break;
+            case 6:
+                audioManager.PlayPoint("TVGLITCH_6", transform.position);
+                break;
+            case 7:
+                audioManager.PlayPoint("TVGLITCH_7", transform.position);
+                break;
+            case 8:
+                audioManager.PlayPoint("TVGLITCH_8", transform.position);
+                break;
+            default:
+                audioManager.PlayPoint("TVGLITCH_1", transform.position);
+                break;
         }
     }
 }

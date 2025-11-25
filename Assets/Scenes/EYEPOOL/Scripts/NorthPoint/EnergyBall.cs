@@ -62,6 +62,8 @@ public class EnergyBall : MonoBehaviour
         {
             speed = Random.Range(2, 5);
         }
+
+        PlayRandomSpawnSound();
     }
 
     // Update is called once per frame
@@ -142,8 +144,8 @@ public class EnergyBall : MonoBehaviour
         transform.localPosition = Vector3.zero;
         personAttached = parent.GetComponent<AugmentaPickup>();
         personAttached.AttachBallRing(this);
+        PlayPickupSound();
         // Instantiate(splat, transform.position + new Vector3(-0.0125f, 0f, 0f), Quaternion.Euler(90, -90, 0)); // run the splat with offset
-        // PlayPickupSound();
         // if (personAttached == null)
         // {
         //     // Debug.Log("unable to pick up person properly");
@@ -160,28 +162,24 @@ public class EnergyBall : MonoBehaviour
             transform.SetParent(null, true);
             personAttached.DropBall();
             spawner.SetLight(ballColorName);
-            // PlayDropOffSound(targetSinkID);
-            float delay = Random.Range(1f, 8f);
+            PlayDropOffSound(targetSinkID);
             spawner.DestroyBall(this);
         }
     }
 
     private void PlayPickupSound()
     {
-        int randInt = Random.Range(1, 4);
+        int randInt = Random.Range(1, 3);
         switch (randInt)
         {
             case 1:
-                audioManager.Play("Ghost Pick Up 1");
+                audioManager.Play("ORB_LOCKON_1");
                 break;
             case 2:
-                audioManager.Play("Ghost Pick Up 2");
-                break;
-            case 3:
-                audioManager.Play("Ghost Pick Up 3");
+                audioManager.Play("ORB_LOCKON_2");
                 break;
             default:
-                audioManager.Play("Ghost Pick Up 3");
+                audioManager.Play("ORB_LOCKON_1");
                 break;
         }
     }
@@ -190,38 +188,50 @@ public class EnergyBall : MonoBehaviour
         switch (portalID)
         {
             case 0:
-                audioManager.Play("Drop Ghost Purple");
+                audioManager.Play("DROP_ORB_1");
                 break;
             case 1:
-                audioManager.Play("Drop Ghost Green");
+                audioManager.Play("DROP_ORB_2");
                 break;
             case 2:
-                audioManager.Play("Drop Ghost Yellow");
+                audioManager.Play("DROP_ORB_3");
                 break;
             case 3:
-                audioManager.Play("Drop Ghost Blue");
+                audioManager.Play("DROP_ORB_4");
                 break;
             default:
-                audioManager.Play("Drop Ghost Blue");
+                audioManager.Play("DROP_ORB_1");
                 break;
         }
     }
 
 
-    private void PlayRandomMovementSound()
+    private void PlayRandomSpawnSound()
     {
-        int randInt = Random.Range(0, 2);
+        int randInt = Random.Range(1, 7);
 
         switch (randInt)
         {
-            case 0:
-                audioManager.Play("Ghost Movement 1");
-                break;
             case 1:
-                audioManager.Play("Ghost Movement 2");
+                audioManager.Play("ORB_APPEAR_1");
+                break;
+            case 2:
+                audioManager.Play("ORB_APPEAR_2");
+                break;
+            case 3:
+                audioManager.Play("ORB_APPEAR_3");
+                break;
+            case 4:
+                audioManager.Play("ORB_APPEAR_4");
+                break;
+            case 5: 
+                audioManager.Play("ORB_APPEAR_5");
+                break;
+            case 6:
+                audioManager.Play("ORB_APPEAR_6");
                 break;
             default:
-                audioManager.Play("Ghost Movement 2");
+                audioManager.Play("ORB_APPEAR_1");
                 break;
         }
     }
