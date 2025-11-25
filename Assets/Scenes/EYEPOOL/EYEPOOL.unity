@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab94d43e88151ea48a63332f066982ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameStateAnimator: {fileID: 1020391600}
   greenLights:
   - {fileID: 690074613}
   - {fileID: 800044760}
@@ -82240,7 +82241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ce1955575ed1449a0615978324c26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 1
+  debugMode: 0
   sounds:
   - name: WINDOW_FROST_1
     clip: {fileID: 8300000, guid: cf2968eceb358ea44b47678f90a5c9b3, type: 3}
@@ -101545,7 +101546,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &1020391600
 Animator:
   serializedVersion: 7
@@ -192549,7 +192550,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695497815}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 9.77}
+  m_LocalPosition: {x: 0, y: 0, z: 7.7700005}
   m_LocalScale: {x: 0.005000001, y: 0.01, z: 0.005000001}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -192559,7 +192560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 16.71, y: 6.13}
+  m_AnchoredPosition: {x: 14.709999, y: 6.13}
   m_SizeDelta: {x: 1124, y: 476}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695497817
@@ -192643,7 +192644,7 @@ MonoBehaviour:
   logText: {fileID: 265611608}
   Debugger: {fileID: 1465430595}
   globalVolume: {fileID: 204809291}
-  audioMixer: {fileID: 24100000, guid: 9c1a3348b8f84a04c90d76cf1463fb03, type: 2}
+  audioMixer: {fileID: 24100000, guid: 967940645f057d7418e09b0abe755320, type: 2}
 --- !u!225 &1695497821
 CanvasGroup:
   m_ObjectHideFlags: 0

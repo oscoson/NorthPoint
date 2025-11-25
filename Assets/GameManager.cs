@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public Animator gameStateAnimator;
     public SpriteRenderer[] greenLights;
     public SpriteRenderer[] redLights;
     public SpriteRenderer[] yellowLights;
@@ -30,19 +31,24 @@ public class GameManager : MonoBehaviour
     {
         foreach (SpriteRenderer light in greenLights)
         {
-            light.color = new Color(0, 43, 5);
+            light.color = new Color(0, 43, 5, 255);
         }
         foreach (SpriteRenderer light in redLights)
         {
-            light.color = new Color(83, 10, 0);
+            light.color = new Color(83, 10, 0, 255);
         }
         foreach (SpriteRenderer light in yellowLights)
         {
-            light.color = new Color(61, 44, 0);
+            light.color = new Color(61, 44, 0, 255);
         }
         foreach (SpriteRenderer light in purpleLights)
         {
-            light.color = new Color(54, 23, 93);
+            light.color = new Color(54, 23, 93, 255);
         }
+    }
+
+    public void SetGameState(string state)
+    {
+        gameStateAnimator.SetTrigger(state);
     }
 }

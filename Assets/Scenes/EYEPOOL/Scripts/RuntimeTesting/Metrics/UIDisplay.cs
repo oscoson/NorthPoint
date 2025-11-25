@@ -20,8 +20,8 @@ public class UIDisplay : MonoBehaviour
 
     private Exposure exposure;
 
-    private const string MUSIC_VOLUME_PARAM = "MUSICVOLUME";
-    private const string SFX_VOLUME_PARAM = "SFXVOLUME";
+    private const string MUSIC_VOLUME_PARAM = "MUSIC";
+    private const string SFX_VOLUME_PARAM = "SFX";
 
 
     void Awake()
@@ -45,7 +45,7 @@ public class UIDisplay : MonoBehaviour
         {
             // int numGhosts = ghostSpawner.ghostsToSpawn;
             int numGhosts = ballSpawner.GetBalls();
-            text += $"# Ghosts: {numGhosts}\n";
+            text += $"# Orbs: {numGhosts}\n";
         }
 
         if (fpsCounter != null)
