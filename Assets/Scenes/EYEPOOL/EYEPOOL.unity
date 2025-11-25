@@ -144743,7 +144743,7 @@ MonoBehaviour:
   - {fileID: 1341926702}
   - {fileID: 749756671}
   frequencyFocusWindow: 16
-  amplification: 384
+  amplification: 1536
   baseHeight: 0.0625
   fftWindow: 1
   useDecibels: 0
@@ -186144,13 +186144,13 @@ AudioSource:
   m_GameObject: {fileID: 1587052177}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bdbf0579e1840ce488a4f9537c459d20, type: 3}
-  m_Resource: {fileID: 8300000, guid: bdbf0579e1840ce488a4f9537c459d20, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 967940645f057d7418e09b0abe755320, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e761fbbc1e2556349b155d583cef7f6d, type: 3}
+  m_Resource: {fileID: 8300000, guid: e761fbbc1e2556349b155d583cef7f6d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -186192,7 +186192,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.754
       inSlope: 0
       outSlope: 0
       tangentMode: 0
