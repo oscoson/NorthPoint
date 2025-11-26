@@ -23,8 +23,6 @@ public class EnergyBall : MonoBehaviour
     private float dropoffTimer = 0f;
     private float hoverCountDown = 0.1f;
 
-    private float size;
-
     private AugmentaPickup personAttached;
     [SerializeField] private float speed;
     [SerializeField] private Vector3 newPos;

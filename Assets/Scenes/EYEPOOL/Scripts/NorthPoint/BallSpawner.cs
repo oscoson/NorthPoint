@@ -78,7 +78,6 @@ public class BallSpawner : MonoBehaviour
         }
         if( ballsLeftToSpawn <= 0 && ballCount <= 0)
         {
-            Debug.Log("Resetting");
             gameManager.SetGameState("END");
             ResetTerminalGoals();
         }
@@ -256,28 +255,24 @@ public class BallSpawner : MonoBehaviour
             case "Purple":
                 if (purpleBallsSpawned >= 5)
                 {
-                    Debug.Log("Removing Purple from available colors");
                     availableOrbColors.Remove("Purple");
                 }
                 break;
             case "Green":
                 if (greenBallsSpawned >= 5)
                 {
-                    Debug.Log("Removing Green from available colors");
                     availableOrbColors.Remove("Green");
                 }
                 break;
             case "Yellow":
                 if (yellowBallsSpawned >= 5)
                 {
-                    Debug.Log("Removing Yellow from available colors");
                     availableOrbColors.Remove("Yellow");
                 }
                 break;
             case "Red":
                 if (redBallsSpawned >= 5)
                 {
-                    Debug.Log("Removing Red from available colors");
                     availableOrbColors.Remove("Red");
                 }
                 break;
