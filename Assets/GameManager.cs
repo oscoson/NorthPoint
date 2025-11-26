@@ -8,6 +8,19 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer[] yellowLights;
     public SpriteRenderer[] purpleLights;
 
+    private Color baseGreenLight;
+    private Color baseRedLight;
+    private Color baseYellowLight;
+    private Color basePurpleLight;
+
+
+    void Awake()
+    {
+        baseGreenLight = greenLights[0].color;
+        baseRedLight = redLights[0].color;
+        baseYellowLight = yellowLights[0].color;
+        basePurpleLight = purpleLights[0].color;
+    }
     public void ActivateLights(string color, int index)
     {
         switch(color)
@@ -31,19 +44,19 @@ public class GameManager : MonoBehaviour
     {
         foreach (SpriteRenderer light in greenLights)
         {
-            light.color = new Color(0, 43, 5, 255);
+            light.color = baseGreenLight;
         }
         foreach (SpriteRenderer light in redLights)
         {
-            light.color = new Color(83, 10, 0, 255);
+            light.color = baseRedLight;
         }
         foreach (SpriteRenderer light in yellowLights)
         {
-            light.color = new Color(61, 44, 0, 255);
+            light.color = baseYellowLight;
         }
         foreach (SpriteRenderer light in purpleLights)
         {
-            light.color = new Color(54, 23, 93, 255);
+            light.color = basePurpleLight;
         }
     }
 
