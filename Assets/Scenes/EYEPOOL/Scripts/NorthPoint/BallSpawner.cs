@@ -43,7 +43,6 @@ public class BallSpawner : MonoBehaviour
 
     // private GameObject spawnEffect;
     private GameManager gameManager;
-    private AudioManager audioManager;
 
     private float sinkBoundary;
 
@@ -53,7 +52,6 @@ public class BallSpawner : MonoBehaviour
         ballPalette = ballPalleteAsset.GetEntries();
         sinkBoundary = Mathf.Abs(xRange.x) - 5f;
         ballsLeftToSpawn = maxBallsInRoom;
-        audioManager = FindAnyObjectByType<AudioManager>();
         gameManager = FindAnyObjectByType<GameManager>();
     }
 
@@ -78,10 +76,12 @@ public class BallSpawner : MonoBehaviour
         {
             zeroFlag = false;
         }
-        // if( ballsLeftToSpawn <= 0 && ballCount <= 0)
-        // {
-        //     ResetTerminalGoals();
-        // }
+        if( ballsLeftToSpawn <= 0 && ballCount <= 0)
+        {
+            Debug.Log("Resetting");
+            gameManager.SetGameState("END");
+            ResetTerminalGoals();
+        }
     }
 
     private void SpawnEnergyBall()
@@ -232,6 +232,7 @@ public class BallSpawner : MonoBehaviour
 
     private void ResetTerminalGoals()
     {
+        fastBallSpawned = false;
         redBallsSpawned = 0;
         yellowBallsSpawned = 0;
         greenBallsSpawned = 0;

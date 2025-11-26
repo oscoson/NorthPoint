@@ -9,9 +9,15 @@ public sealed class FloorPostProcessing : CustomPostProcessVolumeComponent, IPos
     [Tooltip("Controls the intensity of the effect.")]
     public ClampedFloatParameter intensity = new ClampedFloatParameter(0f, 0f, 1f);
 
-    Material m_Material;
+    [Tooltip("Input textures to splice/blend")]
+    public TextureParameter textZero = new TextureParameter(null);
+    public TextureParameter textOne = new TextureParameter(null);
+    public TextureParameter textTwo = new TextureParameter(null);
+    public TextureParameter textThree = new TextureParameter(null);
+    public TextureParameter textFour = new TextureParameter(null);
 
-    public bool IsActive() => m_Material != null && intensity.value > 0f;
+    Material m_Material;
+    public bool IsActive() => m_Material != null & textZero.value != null;
 
     // Do not forget to add this post process in the Custom Post Process Orders list (Project Settings > Graphics > HDRP Global Settings).
     public override CustomPostProcessInjectionPoint injectionPoint => CustomPostProcessInjectionPoint.AfterPostProcess;
@@ -30,9 +36,16 @@ public sealed class FloorPostProcessing : CustomPostProcessVolumeComponent, IPos
     {
         if (m_Material == null)
             return;
-
         m_Material.SetFloat("_Intensity", intensity.value);
         m_Material.SetTexture("_MainTex", source);
+
+        // Bind inputs
+        m_Material.SetTexture("_Input0", textZero.value);
+        m_Material.SetTexture("_Input1", textOne.value);
+        m_Material.SetTexture("_Input2", textTwo.value);
+        m_Material.SetTexture("_Input3", textThree.value);
+        m_Material.SetTexture("_Input4", textFour.value);
+
         HDUtils.DrawFullScreen(cmd, m_Material, destination, shaderPassId: 0);
     }
 

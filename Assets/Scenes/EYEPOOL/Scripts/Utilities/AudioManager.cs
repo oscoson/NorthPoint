@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
@@ -31,16 +30,8 @@ public class Sound
 
 public class AudioManager : MonoBehaviour
 {
+    [SerializeField] private bool debugMode = false;
     public Sound[] sounds;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        Play("Game Start");
-        Play("Main Theme");
-        Play("Portal Sound");
-        Play("Fireplace");
-    }
     
     void Awake()
     {
@@ -57,10 +48,21 @@ public class AudioManager : MonoBehaviour
         
     }
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        BackgroundSounds();
+        PeriodicSoundHandler(); 
+    }
+
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (s == null) return;
+        if (s == null) 
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
         
         if (s.useFadeIn)
         {
@@ -79,12 +81,24 @@ public class AudioManager : MonoBehaviour
             }
 
         }
+
+        if(debugMode)
+        {
+            Debug.Log("Playing sound: " + s.name);
+        }
     }
     
     public void PlayPoint(string name, Vector3 position)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        
         if (s == null) return;
+
+        if(debugMode)
+        {
+            Debug.Log("Playing 3D sound: " + s.name + " at position " + position.ToString());   
+        }
+        s.source.spatialBlend = 1.0f; 
         AudioSource.PlayClipAtPoint(s.clip, position, s.volume);
     }
 
@@ -146,6 +160,14 @@ public class AudioManager : MonoBehaviour
         if (s == null) return;
         StartCoroutine(FadeOut(s, fadeTime));
     }
+
+    private void BackgroundSounds()
+    {
+        Play("BGM");
+        Play("THUNDERSTORM");
+        Play("CRT_SCREEN");
+        Play("NOTES_FLYING");
+    }
     
     private IEnumerator FadeIn(Sound sound, float fadeTime)
     {
@@ -176,5 +198,67 @@ public class AudioManager : MonoBehaviour
         
         sound.source.Stop();
         sound.source.volume = sound.volume; // Reset to original volume
+    }
+
+    private void PeriodicSoundHandler()
+    {
+        StartCoroutine(RandomAmbientSoundCoroutine());
+    }
+
+    private IEnumerator RandomAmbientSoundCoroutine()
+    {
+        yield return new WaitForSeconds(UnityEngine.Random.Range(2, 11));
+
+        int randInt = UnityEngine.Random.Range(1, 15);
+
+        switch(randInt)
+        {
+            case 1:
+                Play("ELEC_1");
+                break;
+            case 2:
+                Play("ELEC_2");
+                break;
+            case 3:
+                Play("ELEC_3");
+                break;
+            case 4:
+                Play("ELEC_4");
+                break;
+            case 5:
+                Play("COMPNOISE_1");
+                break;
+            case 6:
+                Play("COMPNOISE_2");
+                break;
+            case 7:
+                Play("COMPNOISE_3");
+                break;
+            case 8:
+                Play("COMPNOISE_4");
+                break;
+            case 9:
+                Play("COMPNOISE_5");
+                break;
+            case 10:
+                Play("COMPNOISE_6");
+                break;
+            case 11:
+                Play("DIAL_1");
+                break;
+            case 12:
+                Play("DIAL_2");
+                break;
+            case 13:
+                Play("DIAL_3");
+                break;
+            case 14:
+                Play("DIAL_4");
+                break;
+            default:
+                Play("ELEC_1");
+                break;
+        }
+        StartCoroutine(RandomAmbientSoundCoroutine());
     }
 }
