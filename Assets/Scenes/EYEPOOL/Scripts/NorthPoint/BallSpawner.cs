@@ -39,9 +39,6 @@ public class BallSpawner : MonoBehaviour
 
     [SerializeField] private float xSpawnRange;
     [SerializeField] private float zSpawnRange;
-    // [SerializeField] private Vector2 yRange = new Vector2(-13.9f, 13.9f);
-
-    // private GameObject spawnEffect;
     private GameManager gameManager;
 
     private float sinkBoundary;
@@ -143,14 +140,6 @@ public class BallSpawner : MonoBehaviour
             GameObject newEnergyBall = Instantiate(ballPalette[ballSeed].prefab, pos, ballPalette[ballSeed].prefab.transform.rotation);
             newEnergyBall.GetComponent<EnergyBall>().Initialise(newEnergyBall, ballSeed, ballPalette[ballSeed].material.color, ballPalette[ballSeed].captureSprite, ballPalette[ballSeed].spawnFX, this, ballColor);
         }
-        // else
-        // {
-        //     SpawnEnergyBall(); 
-        // }
-
-
-        // Audio Manager Play
-        // Instantiate Spawn Effect
     }
 
     public void DestroyBall(EnergyBall energyBall)
@@ -178,14 +167,6 @@ public class BallSpawner : MonoBehaviour
             RestorePopulationCount(obj.GetComponentInChildren<EnergyBall>().ballColorName);
             DestroyBall(obj.GetComponentInChildren<EnergyBall>());
         }
-        // can put else statement here if we want Balls to despawn when player leaves
-        // Cancel Ball spawn if they left early
-        // if (presenceTimers.TryGetValue(id, out Coroutine c))
-        // {
-        //     StopCoroutine(c);
-        //     presenceTimers.Remove(id);
-        //     // Debug.Log($"Cancelled spawn for object {id} due to early exit");
-        // }
 
     }
 
@@ -308,7 +289,6 @@ public class BallSpawner : MonoBehaviour
     {
         if (!availableOrbColors.Contains(colorName))
         {
-            Debug.Log("Restoring " + colorName + " to available colors");
             availableOrbColors.Add(colorName);
         }
         switch(colorName)
