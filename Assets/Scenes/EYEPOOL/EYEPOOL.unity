@@ -82778,20 +82778,20 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: DROP_ORB_2
-    clip: {fileID: 8300000, guid: 8c6a7453a260aaf40a814f954818e772, type: 3}
+    clip: {fileID: 8300000, guid: 490486fd39a6fba4d89729cd81829f01, type: 3}
     volume: 0.9
     pitch: 1
     loop: 0
     playAsOneShot: 1
     mixer: {fileID: 388316501941469680, guid: 967940645f057d7418e09b0abe755320, type: 2}
     useFadeIn: 0
-    fadeInTime: 0
-    useFadeOut: 0
-    fadeOutTime: 0
+    fadeInTime: 0.1
+    useFadeOut: 1
+    fadeOutTime: 2
     source: {fileID: 0}
   - name: DROP_ORB_3
-    clip: {fileID: 8300000, guid: 9b062968aaf2b794b85148d3a3ef82d8, type: 3}
-    volume: 0.9
+    clip: {fileID: 8300000, guid: 731921d54425666478bef7d43f7631f5, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     playAsOneShot: 1
@@ -82802,8 +82802,8 @@ MonoBehaviour:
     fadeOutTime: 0
     source: {fileID: 0}
   - name: DROP_ORB_4
-    clip: {fileID: 8300000, guid: 6f6f8e70c2a454a4ca382ff37a9324a2, type: 3}
-    volume: 0.9
+    clip: {fileID: 8300000, guid: 3e7ebb3fda1bc3c4cb128ac4bd9a2eda, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     playAsOneShot: 1
