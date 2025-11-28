@@ -1,5 +1,6 @@
 using UnityEngine;
 using Augmenta;
+using UnityEngine.Rendering;
 
 /// Adds interactivity to an Augmenta object:
 /// Pulsing influence ring and changes into respective Ghosts Sprite when captured
@@ -54,6 +55,8 @@ public class AugmentaPickup : MonoBehaviour
         myCollider.direction = 1; // 0 = X, 1 = Y, 2 = Z 
         myCollider.height = 3.0f;
         myCollider.isTrigger = false;
+        gameObject.AddComponent<SortingGroup>();
+        gameObject.GetComponent<SortingGroup>().sortingLayerName = "Foreground";
 
         Rigidbody rb = gameObject.AddComponent<Rigidbody>();
         rb.isKinematic = true;                  // no forces, just follows pivot
