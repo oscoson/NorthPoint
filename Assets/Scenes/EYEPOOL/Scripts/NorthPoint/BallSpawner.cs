@@ -39,6 +39,9 @@ public class BallSpawner : MonoBehaviour
 
     [SerializeField] private float xSpawnRange;
     [SerializeField] private float zSpawnRange;
+
+    [Header("Delivery Radius Setting")]
+    private float deliveryRadius = 5f;
     private GameManager gameManager;
 
     private float sinkBoundary;
@@ -47,7 +50,7 @@ public class BallSpawner : MonoBehaviour
     void Awake()
     {
         ballPalette = ballPalleteAsset.GetEntries();
-        sinkBoundary = Mathf.Abs(xRange.x) - 5f;
+        sinkBoundary = Mathf.Abs(xRange.x) - deliveryRadius;
         ballsLeftToSpawn = maxBallsInRoom;
         gameManager = FindAnyObjectByType<GameManager>();
     }
