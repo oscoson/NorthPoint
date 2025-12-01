@@ -83,7 +83,7 @@ Material:
     - _ExcludeFromTUAndAA: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
-    - _NoiseScale: 1.29
+    - _NoiseScale: 0.32
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
