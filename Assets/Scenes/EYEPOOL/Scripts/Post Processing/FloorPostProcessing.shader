@@ -65,40 +65,33 @@ Shader "Hidden/Shader/FloorPostProcessing"
     {
         UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 
-        // float2 uv = input.textcoord.xy;
-        // float slice = uv.x;
+        float2 uv = input.texcoord;
 
-        // float4 col = 0;
+        // Region bounds
+        float2 minTL = float2(0.0, 0.63);
+        float2 maxTL = float2(0.5, 1.0);
 
-        // if (slice < 0.2)
-        // {
-        //     col = SAMPLE_TEXTURE2D_X(_Input0, sampler_Input0, uv * 5.0);
-        // }
-        // else if (slice < 0.4)
-        // {
-        //     col = SAMPLE_TEXTURE2D_X(_Input1, sampler_Input1, (uv - float2(0.2, 0)) * 5.0);
-        // }
-        // else if (slice < 0.6)
-        // {
-        //     col = SAMPLE_TEXTURE2D_X(_Input2, sampler_Input2, (uv - float2(0.4, 0)) * 5.0);
-        // }
-        // else if (slice < 0.8)
-        // {
-        //     col = SAMPLE_TEXTURE2D_X(_Input3, sampler_Input3, (uv - float2(0.6, 0)) * 5.0);
-        // }
-        // else
-        // {
-        //     col = SAMPLE_TEXTURE2D_X(_Input4, sampler_Input4, (uv - float2(0.8, 0)) * 5.0);
-        // }
+        // float2 minTR = float2(0.5, 0.633);
+        // float2 maxTR = float2(1.0, 1.0);
 
-        // Note that if HDUtils.DrawFullScreen is not used to render the post process, you don't need to call ClampAndScaleUVForBilinearPostProcessTexture.
+        bool inTL =
+            uv.x >= minTL.x && uv.x <= maxTL.x &&
+            uv.y >= minTL.y && uv.y <= maxTL.y;
+
+        // bool inTR =
+        //     uv.x >= minTR.x && uv.x <= maxTR.x &&
+        //     uv.y >= minTR.y && uv.y <= maxTR.y;
+
+        // Mask out everything except the two top regions
+        if (!(inTL))
+            return float4(0,0,0,1);
 
         float3 sourceColor = SAMPLE_TEXTURE2D_X(_MainTex, s_linear_clamp_sampler, ClampAndScaleUVForBilinearPostProcessTexture(input.texcoord.xy)).xyz;
 
         // Apply greyscale effect
         float3 color = lerp(sourceColor, Luminance(sourceColor), _Intensity);
         
-        return SAMPLE_TEXTURE2D(_Input0, sampler_Input0, input.texcoord);
+        return SAMPLE_TEXTURE2D(_Input0, sampler_Input0, uv);
     }
 
     ENDHLSL

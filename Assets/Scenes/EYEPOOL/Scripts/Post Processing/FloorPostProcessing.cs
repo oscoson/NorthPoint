@@ -17,7 +17,7 @@ public sealed class FloorPostProcessing : CustomPostProcessVolumeComponent, IPos
     public TextureParameter textFour = new TextureParameter(null);
 
     Material m_Material;
-    public bool IsActive() => m_Material != null & textZero.value != null;
+    public bool IsActive() => textZero.value != null;
 
     // Do not forget to add this post process in the Custom Post Process Orders list (Project Settings > Graphics > HDRP Global Settings).
     public override CustomPostProcessInjectionPoint injectionPoint => CustomPostProcessInjectionPoint.AfterPostProcess;
