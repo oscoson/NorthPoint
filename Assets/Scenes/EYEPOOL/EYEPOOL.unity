@@ -103269,7 +103269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1020391600
 Animator:
   serializedVersion: 7
@@ -146509,7 +146509,16 @@ MonoBehaviour:
   baseHeight: 0.0625
   fftWindow: 1
   useDecibels: 0
+  voiceOverClipDuration: 15
+  isPlaying: 0
   spectrumData: []
+  introClips: []
+  generalAmbienceClips: []
+  easterEggClips: []
+  energyBallCaptureClips: []
+  energyBallDropClips: []
+  fullConduitClips: []
+  gameCompleteClips: []
 --- !u!1 &1193898863
 GameObject:
   m_ObjectHideFlags: 0

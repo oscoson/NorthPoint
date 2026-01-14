@@ -32,7 +32,7 @@ public class EnergyBall : MonoBehaviour
     [SerializeField] private GameObject attachedModel;
     private bool isFastBall = false;
     private AudioManager audioManager;
-    private Animator animator;
+    private AudioVisualizer audioVisualizer;
     public void Initialise(GameObject _ballObject, int _targetSinkID, Color _ballColor, Sprite _captureSprite, GameObject _captureEffect, BallSpawner ballSpawner, string ballColorString)
     {
         ballObject = _ballObject;
@@ -44,7 +44,7 @@ public class EnergyBall : MonoBehaviour
         ballColorName = ballColorString;
 
         audioManager = FindAnyObjectByType<AudioManager>();
-        animator = ballObject.GetComponent<Animator>();
+        audioVisualizer = FindAnyObjectByType<AudioVisualizer>();
         
         float rate = Random.Range(0.05f, 1f);
         // Gradually increase chance of fast ball spawning as more balls are in the room
@@ -180,6 +180,7 @@ public class EnergyBall : MonoBehaviour
                 audioManager.Play("ORB_LOCKON_1");
                 break;
         }
+        audioVisualizer.PlayVOClip(audioVisualizer.energyBallCaptureClips);
     }
     private void PlayDropOffSound(int portalID)
     {
@@ -201,6 +202,7 @@ public class EnergyBall : MonoBehaviour
                 audioManager.Play("DROP_ORB_1");
                 break;
         }
+        audioVisualizer.PlayVOClip(audioVisualizer.energyBallDropClips);
     }
 
 

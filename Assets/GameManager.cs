@@ -7,15 +7,17 @@ public class GameManager : MonoBehaviour
     public SpriteRenderer[] redLights;
     public SpriteRenderer[] yellowLights;
     public SpriteRenderer[] purpleLights;
-
+    
     private Color baseGreenLight;
     private Color baseRedLight;
     private Color baseYellowLight;
     private Color basePurpleLight;
 
+    private AudioVisualizer audioVisualizer;
 
     void Awake()
     {
+        audioVisualizer = FindAnyObjectByType<AudioVisualizer>();
         baseGreenLight = greenLights[0].color;
         baseRedLight = redLights[0].color;
         baseYellowLight = yellowLights[0].color;
@@ -38,6 +40,10 @@ public class GameManager : MonoBehaviour
                 purpleLights[index].color = new Color(113, 0 , 255);
                 break;
         }
+        if(index == 4)
+        {
+            audioVisualizer.PlayVOClip(audioVisualizer.fullConduitClips);
+        }
     }
 
     public void DeactivateAllLights()
@@ -58,6 +64,7 @@ public class GameManager : MonoBehaviour
         {
             light.color = basePurpleLight;
         }
+        audioVisualizer.PlayVOClip(audioVisualizer.gameCompleteClips);
     }
 
     public void SetGameState(string state)

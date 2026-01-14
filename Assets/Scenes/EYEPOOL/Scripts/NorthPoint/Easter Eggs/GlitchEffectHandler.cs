@@ -4,11 +4,13 @@ public class GlitchEffectHandler : MonoBehaviour
 {
     private SpriteRenderer glitchEffectObject;
     private AudioManager audioManager;
+    private AudioVisualizer audioVisualizer;
 
     void Awake()
     {
         glitchEffectObject = gameObject.GetComponent<SpriteRenderer>();
         audioManager = FindAnyObjectByType<AudioManager>();
+        audioVisualizer = FindAnyObjectByType<AudioVisualizer>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -27,6 +29,7 @@ public class GlitchEffectHandler : MonoBehaviour
         {
             glitchEffectObject.enabled = true;
             PlayGlitchSound();
+            audioVisualizer.PlayVOClip(audioVisualizer.easterEggClips, true, 1);
         }
     }
 

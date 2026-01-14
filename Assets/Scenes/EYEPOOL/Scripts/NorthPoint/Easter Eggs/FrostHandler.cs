@@ -15,6 +15,7 @@ public class FrostHandler : MonoBehaviour
     public Color frostEffectObjectSix;
 
     private AudioManager audioManager;
+    private AudioVisualizer audioVisualizer;
 
     void Awake()
     {
@@ -26,6 +27,7 @@ public class FrostHandler : MonoBehaviour
         frostEffectObjectSix = frostEffectObjects[5].GetComponent<SpriteRenderer>().color;
 
         audioManager = FindAnyObjectByType<AudioManager>();
+        audioVisualizer = FindAnyObjectByType<AudioVisualizer>();
     }
 
     void Update()
@@ -72,7 +74,8 @@ public class FrostHandler : MonoBehaviour
             usersInZone.Add(augmenta);
             if(usersInZone.Count == 1)
             {
-                PlayFrostSound();   
+                PlayFrostSound();
+                audioVisualizer.PlayVOClip(audioVisualizer.easterEggClips, true, 0);
             }
         }
     }

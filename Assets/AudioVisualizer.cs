@@ -12,18 +12,45 @@ public class AudioVisualizer : MonoBehaviour
     public float baseHeight = 0.0f;
     public FFTWindow fftWindow;
     public bool useDecibels;
- 
+    [SerializeField] private float voiceOverClipDuration;
+    private float voiceOverClipCooldown;
+
     [Header("State")]
+    public bool isPlaying = false;
     public float[] spectrumData;
+
+    [Header("VO Audio Clip Triggers")]
+    public AudioClip[] introClips;
+    public AudioClip[] generalAmbienceClips;
+    public AudioClip[] easterEggClips;
+    public AudioClip[] energyBallCaptureClips;
+    public AudioClip[] energyBallDropClips;
+    public AudioClip[] fullConduitClips;
+    public AudioClip[] gameCompleteClips;
  
     void Awake()
     {
         // Must be a power of 2 number, between 64 and 8192
         spectrumData = new float[4096];
+        voiceOverClipCooldown = voiceOverClipDuration;
+    }
+    
+    void Start()
+    {
+        PlayVOClip(introClips);
     }
  
     void Update()
     {
+        voiceOverClipCooldown -= Time.deltaTime;
+        if(voiceOverClipCooldown < 0f)
+        {
+            Debug.Log("VO Clip Cooldown ended");
+            isPlaying = false;
+            voiceOverClipCooldown = voiceOverClipDuration;
+            PlayVOClip(generalAmbienceClips);
+        }
+
         audioSource.GetSpectrumData(spectrumData, 0, fftWindow);
         var blockSize = spectrumData.Length / bars.Length / (int)frequencyFocusWindow;
         for (int i = 0; i < bars.Length; ++i)
@@ -47,6 +74,25 @@ public class AudioVisualizer : MonoBehaviour
             bars[i].localScale = scale;
         }
     }
+
+    public void PlayVOClip(AudioClip[] audioClips, bool isEasterEgg = false, int index = 0)
+    {
+        if(!isPlaying && !isEasterEgg)
+        {
+            isPlaying = true;
+            if(!isEasterEgg)
+            {
+                audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
+            }
+            else
+            {
+                audioSource.clip = audioClips[index];
+            }       
+        }
+
+    }
+
+
 }
 
 public enum FrequencyFocusWindow
