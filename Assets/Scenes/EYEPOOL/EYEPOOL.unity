@@ -146437,7 +146437,7 @@ GameObject:
   - component: {fileID: 1190836422}
   - component: {fileID: 1190836423}
   m_Layer: 0
-  m_Name: Wave Form Visualizer
+  m_Name: Wave Form Console (Visualizer)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146512,13 +146512,44 @@ MonoBehaviour:
   voiceOverClipDuration: 15
   isPlaying: 0
   spectrumData: []
-  introClips: []
-  generalAmbienceClips: []
-  easterEggClips: []
-  energyBallCaptureClips: []
-  energyBallDropClips: []
-  fullConduitClips: []
-  gameCompleteClips: []
+  introClips:
+  - {fileID: 8300000, guid: b453ae1f33500e24e951579869c10858, type: 3}
+  generalAmbienceClips:
+  - {fileID: 8300000, guid: 163be1aded3a6f94b823764cc7b35a4b, type: 3}
+  - {fileID: 8300000, guid: e3ca59734f613a44890036c8e641721f, type: 3}
+  - {fileID: 8300000, guid: 047d1d20c0077b44cb2f4756e59cc59a, type: 3}
+  - {fileID: 8300000, guid: 6190bda1e25e2ef4db73b5de3638a579, type: 3}
+  - {fileID: 8300000, guid: 81702008f49bdb540a9531dd5cbbae40, type: 3}
+  - {fileID: 8300000, guid: a84441ab352b778428870e9f575d483d, type: 3}
+  - {fileID: 8300000, guid: 75be7451f6e013b4c81e8ba9441c0cca, type: 3}
+  - {fileID: 8300000, guid: 9fe56e17fcfbb6041bec3ed8b4f53bad, type: 3}
+  - {fileID: 8300000, guid: 70ba14bed5b5d134296ec42093739400, type: 3}
+  - {fileID: 8300000, guid: 8d97fce9f3471be4e8f27827e58024a7, type: 3}
+  easterEggClips:
+  - {fileID: 8300000, guid: 13883e46f269b7d41bbdd83f630cf71a, type: 3}
+  - {fileID: 8300000, guid: f0dac42b8a5ab524b879f9d64f88530c, type: 3}
+  energyBallCaptureClips:
+  - {fileID: 8300000, guid: 71b53c7a2ad600d458600346a86f9296, type: 3}
+  - {fileID: 8300000, guid: cfaeeda304d68ee42a7782fe9211d2ef, type: 3}
+  - {fileID: 8300000, guid: 5dc623a20f6a3ec4f9b040277e3b967f, type: 3}
+  - {fileID: 8300000, guid: 056f90a91baad034d8e8cd5029a7c407, type: 3}
+  - {fileID: 8300000, guid: 65c1f978f508fc849b30c7d79fc55a82, type: 3}
+  energyBallDropClips:
+  - {fileID: 8300000, guid: f13fe784155700a4595a69288a719707, type: 3}
+  - {fileID: 8300000, guid: a3ca2d3f18ffd5d4998f2038d9fa355b, type: 3}
+  - {fileID: 8300000, guid: 9b9acbc929e64cf4bbabd756e53a7c1e, type: 3}
+  - {fileID: 8300000, guid: e2578847b7842914da007e8649447ee6, type: 3}
+  fullConduitClips:
+  - {fileID: 8300000, guid: d85f44a2b829687469c75539291bf87b, type: 3}
+  - {fileID: 8300000, guid: 40203532d65b23949931f21f7c275030, type: 3}
+  - {fileID: 8300000, guid: 1d47c810d5783c3489d83604e01a811f, type: 3}
+  - {fileID: 8300000, guid: ae6084924f5367d4e8a96d2b88b70df2, type: 3}
+  gameCompleteClips:
+  - {fileID: 8300000, guid: eed3ed1a5d44c7f43a66f37ccd93a0d6, type: 3}
+  - {fileID: 8300000, guid: 6f4dc16c0780e4841904378a82d86913, type: 3}
+  - {fileID: 8300000, guid: e0b800967ee10c24f9163095c5b575a2, type: 3}
+  - {fileID: 8300000, guid: 0abd38de74dac3f438d3480d896fbcd4, type: 3}
+  - {fileID: 8300000, guid: 28afbebfaaa47c64b808c08c89a84d38, type: 3}
 --- !u!1 &1193898863
 GameObject:
   m_ObjectHideFlags: 0
