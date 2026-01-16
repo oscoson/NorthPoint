@@ -101,7 +101,6 @@ public class AudioVisualizer : MonoBehaviour
         {
             ambienceVoiceOverCountdown = ambienceVoiceOverTimer;
             PlayVOClip(ambienceVOClips);
-            Debug.Log("ambience VO Clip Triggered");
         }
     }
 
@@ -110,7 +109,6 @@ public class AudioVisualizer : MonoBehaviour
         voiceOverClipCountdown -= Time.deltaTime;
         if(voiceOverClipCountdown <= 0f)
         {
-            Debug.Log("VO Clip Cooldown ended");
             isPlaying = false;
             voiceOverClipCountdown = voiceOverClipDuration;
         }
