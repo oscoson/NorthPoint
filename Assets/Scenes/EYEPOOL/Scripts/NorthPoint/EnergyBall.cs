@@ -202,7 +202,11 @@ public class EnergyBall : MonoBehaviour
                 audioManager.Play("DROP_ORB_1");
                 break;
         }
-        audioVisualizer.PlayVOClip(audioVisualizer.energyBallDropClips);
+        if(spawner.GetBallsLeftToSpawn() > 0 && spawner.GetBalls() > 1)
+        {
+            audioVisualizer.PlayVOClip(audioVisualizer.energyBallDropClips);
+            return;
+        }
     }
 
 

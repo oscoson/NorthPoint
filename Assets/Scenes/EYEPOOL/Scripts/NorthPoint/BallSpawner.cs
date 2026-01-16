@@ -31,7 +31,7 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private int ballCount;
     [SerializeField] private bool zeroFlag;
     [SerializeField] private bool isSpawning;
-    [SerializeField] List<string> availableOrbColors = new List<string> { "Red", "Green", "Purple", "Yellow" };
+    [SerializeField] private List<string> availableOrbColors = new List<string> { "Red", "Green", "Purple", "Yellow" };
     private static BallPalette.Entry[] ballPalette;
 
     [Header("Spawn Area Settings")]
@@ -40,7 +40,7 @@ public class BallSpawner : MonoBehaviour
     [SerializeField] private float xSpawnRange;
     [SerializeField] private float zSpawnRange;
 
-    [Header("Delivery Radius Setting")]
+    private AudioVisualizer audioVisualizer;
     private float deliveryRadius = 5f;
     private GameManager gameManager;
 
@@ -53,6 +53,7 @@ public class BallSpawner : MonoBehaviour
         sinkBoundary = Mathf.Abs(xRange.x) - deliveryRadius;
         ballsLeftToSpawn = maxBallsInRoom;
         gameManager = FindAnyObjectByType<GameManager>();
+        audioVisualizer = FindAnyObjectByType<AudioVisualizer>();
     }
 
     void Start()
@@ -78,6 +79,7 @@ public class BallSpawner : MonoBehaviour
         }
         if( ballsLeftToSpawn <= 0 && ballCount <= 0)
         {
+            audioVisualizer.PlayVOClip(audioVisualizer.gameCompleteClips);
             gameManager.SetGameState("END");
             ResetTerminalGoals();
         }

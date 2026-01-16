@@ -12,8 +12,10 @@ public class AudioVisualizer : MonoBehaviour
     public float baseHeight = 0.0f;
     public FFTWindow fftWindow;
     public bool useDecibels;
-    [SerializeField] private float voiceOverClipDuration;
-    private float voiceOverClipCooldown;
+    [SerializeField] private float voiceOverClipCountdown;
+    [SerializeField] private float ambienceVoiceOverCountdown;
+    private float ambienceVoiceOverTimer;
+    private float voiceOverClipDuration;
 
     [Header("State")]
     public bool isPlaying = false;
@@ -21,7 +23,7 @@ public class AudioVisualizer : MonoBehaviour
 
     [Header("VO Audio Clip Triggers")]
     public AudioClip[] introClips;
-    public AudioClip[] generalAmbienceClips;
+    public AudioClip[] ambienceVOClips;
     public AudioClip[] easterEggClips;
     public AudioClip[] energyBallCaptureClips;
     public AudioClip[] energyBallDropClips;
@@ -32,7 +34,8 @@ public class AudioVisualizer : MonoBehaviour
     {
         // Must be a power of 2 number, between 64 and 8192
         spectrumData = new float[4096];
-        voiceOverClipCooldown = voiceOverClipDuration;
+        ambienceVoiceOverTimer = ambienceVoiceOverCountdown;
+        voiceOverClipDuration = voiceOverClipCountdown;
     }
     
     void Start()
@@ -42,14 +45,8 @@ public class AudioVisualizer : MonoBehaviour
  
     void Update()
     {
-        voiceOverClipCooldown -= Time.deltaTime;
-        if(voiceOverClipCooldown < 0f)
-        {
-            Debug.Log("VO Clip Cooldown ended");
-            isPlaying = false;
-            voiceOverClipCooldown = voiceOverClipDuration;
-            PlayVOClip(generalAmbienceClips);
-        }
+        VOTimer();
+        AmbienceVOCountdown();
 
         audioSource.GetSpectrumData(spectrumData, 0, fftWindow);
         var blockSize = spectrumData.Length / bars.Length / (int)frequencyFocusWindow;
@@ -77,19 +74,46 @@ public class AudioVisualizer : MonoBehaviour
 
     public void PlayVOClip(AudioClip[] audioClips, bool isEasterEgg = false, int index = 0)
     {
-        if(!isPlaying && !isEasterEgg)
+        if(!isPlaying)
         {
             isPlaying = true;
             if(!isEasterEgg)
             {
                 audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
+                audioSource.Play();
             }
             else
             {
                 audioSource.clip = audioClips[index];
+                audioSource.Play();
             }       
         }
 
+    }
+
+    private void AmbienceVOCountdown()
+    {
+        if(!isPlaying)
+        {
+            ambienceVoiceOverCountdown -= Time.deltaTime;
+        }
+        if(ambienceVoiceOverCountdown <= 0f)
+        {
+            ambienceVoiceOverCountdown = ambienceVoiceOverTimer;
+            PlayVOClip(ambienceVOClips);
+            Debug.Log("ambience VO Clip Triggered");
+        }
+    }
+
+    private void VOTimer()
+    {
+        voiceOverClipCountdown -= Time.deltaTime;
+        if(voiceOverClipCountdown <= 0f)
+        {
+            Debug.Log("VO Clip Cooldown ended");
+            isPlaying = false;
+            voiceOverClipCountdown = voiceOverClipDuration;
+        }
     }
 
 

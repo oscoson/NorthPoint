@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
                 purpleLights[index].color = new Color(113, 0 , 255);
                 break;
         }
-        if(index == 4)
+        if(index == 4 && FindAnyObjectByType<BallSpawner>().GetBallsLeftToSpawn() > 0 && FindAnyObjectByType<BallSpawner>().GetBalls() > 1)
         {
             audioVisualizer.PlayVOClip(audioVisualizer.fullConduitClips);
         }
