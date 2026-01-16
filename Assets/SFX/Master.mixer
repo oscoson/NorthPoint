@@ -104,6 +104,8 @@ AudioMixerController:
     name: MUSIC
   - guid: 5abd3e922139a0b4a840461dd8132a23
     name: SFX
+  - guid: a668646a99198274398376646f7832ee
+    name: VO
   m_AudioMixerGroupViews:
   - guids:
     - 7922e9459a424334ea0ab301913c6f06

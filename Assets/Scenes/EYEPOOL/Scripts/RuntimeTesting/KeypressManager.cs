@@ -21,6 +21,8 @@ public class KeypressManager : MonoBehaviour
     public UnityEvent OnDPressed;
     public UnityEvent OnQPressed;
     public UnityEvent onEPressed;
+    public UnityEvent OnZPressed;
+    public UnityEvent OnCPressed;
     void Update()
     {
         // ESC quit game (and invoke any extra listeners)
@@ -47,6 +49,8 @@ public class KeypressManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D)) OnDPressed?.Invoke(); // Increase SFX Volume
         if (Input.GetKeyDown(KeyCode.Q)) OnQPressed?.Invoke(); // Decrease Music Volume
         if (Input.GetKeyDown(KeyCode.E)) onEPressed?.Invoke(); // Increase Music Volume
+        if (Input.GetKeyDown(KeyCode.Z)) OnZPressed?.Invoke(); // Decrease VO Volume
+        if (Input.GetKeyDown(KeyCode.C)) OnCPressed?.Invoke(); // Increase
     }
 
     // ───── Private helpers ─────

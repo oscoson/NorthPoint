@@ -22,6 +22,7 @@ public class UIDisplay : MonoBehaviour
 
     private const string MUSIC_VOLUME_PARAM = "MUSIC";
     private const string SFX_VOLUME_PARAM = "SFX";
+    private const string VO_VOLUME_PARAM = "VO";
 
 
     void Awake()
@@ -33,6 +34,8 @@ public class UIDisplay : MonoBehaviour
         keypressManager.onEPressed.AddListener(IncreaseMusicVolume);
         keypressManager.OnAPressed.AddListener(DecreaseSFXVolume);
         keypressManager.OnDPressed.AddListener(IncreaseSFXVolume);
+        keypressManager.OnZPressed.AddListener(DecreaseVOVolume);
+        keypressManager.OnCPressed.AddListener(IncreaseVOVolume);
     }
 
     void Update()
@@ -64,8 +67,10 @@ public class UIDisplay : MonoBehaviour
         {
             audioMixer.GetFloat(MUSIC_VOLUME_PARAM, out float musicVolume);
             audioMixer.GetFloat(SFX_VOLUME_PARAM, out float sfxVolume);
+            audioMixer.GetFloat(VO_VOLUME_PARAM, out float voVolume);
             text += $"\n\nMusic Volume: {musicVolume:F1} dB" +
-                    $"\nSFX Volume: {sfxVolume:F1} dB";
+                    $"\nSFX Volume: {sfxVolume:F1} dB" +
+                    $" VO Volume: {voVolume:F1} dB";
         }
 
         logText.text = text;
@@ -113,6 +118,20 @@ public class UIDisplay : MonoBehaviour
         audioMixer.GetFloat(SFX_VOLUME_PARAM, out float currentVolume);
         currentVolume = Mathf.Clamp(currentVolume - 2f, -20f, 20f);
         audioMixer.SetFloat(SFX_VOLUME_PARAM, currentVolume);
+    }
+
+    public void IncreaseVOVolume()
+    {
+        audioMixer.GetFloat(VO_VOLUME_PARAM, out float currentVolume);
+        currentVolume = Mathf.Clamp(currentVolume + 2f, -20f, 20f);
+        audioMixer.SetFloat(VO_VOLUME_PARAM, currentVolume);
+    }
+
+    public void DecreaseVOVolume()
+    {
+        audioMixer.GetFloat(VO_VOLUME_PARAM, out float currentVolume);
+        currentVolume = Mathf.Clamp(currentVolume - 2f, -20f, 20f);
+        audioMixer.SetFloat(VO_VOLUME_PARAM, currentVolume);
     }
     
 
