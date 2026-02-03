@@ -2470,26 +2470,6 @@ MonoBehaviour:
   intensity:
     m_OverrideState: 1
     m_Value: 0
-  textZero:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
-    dimension: 1
-  textOne:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
-    dimension: 1
-  textTwo:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
-    dimension: 1
-  textThree:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
-    dimension: 1
-  textFour:
-    m_OverrideState: 1
-    m_Value: {fileID: 0}
-    dimension: 1
 --- !u!114 &7502528774814404555
 MonoBehaviour:
   m_ObjectHideFlags: 3
